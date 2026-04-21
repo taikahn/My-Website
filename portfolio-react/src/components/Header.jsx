@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import ThemeToggle from './ThemeToggle';
 
 const navLinks = [
   { label: 'Case Studies', to: '/#case-studies' },
@@ -10,7 +11,7 @@ const navLinks = [
   { label: 'Contact', to: '/#contact' },
 ];
 
-export default function Header() {
+export default function Header({ theme, onToggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -72,6 +73,7 @@ export default function Header() {
               {label}
             </Link>
           ))}
+          <ThemeToggle theme={theme} onToggle={onToggleTheme} />
         </nav>
       </div>
     </header>
