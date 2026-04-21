@@ -306,7 +306,43 @@ export default function Home() {
                 <h2>Software experience</h2>
               </div>
               <div className="pill-group">
-                {['Claude','Figma','Affinity','Adobe Creative Cloud','Adobe Photoshop','Adobe Illustrator','Adobe XD','Adobe InDesign','Final Cut','Cursor','VSCode','Glint','WordPress','Elementor','Miro','Canva','HTML','CSS','NPM / Node / JS','Vite / React','Terminal / CLI'].map((s) => (
+                {[
+                  'MacOS',
+                  'Windows',
+                  'Linux',
+                  'Claude',
+                  'Figma',
+                  'Adobe Creative Cloud',
+                  'Affinity',
+                  'Cursor',
+                  'VSCode',
+                  'Glint',
+                  'WordPress',
+                  'HTML',
+                  'CSS',
+                  'CSS',
+                  'NPM',
+                  'Node',
+                  'JS',
+                  'Vite',
+                  'React',
+                  'Terminal',
+                  'CLI',
+                  'Rust',
+                  'Tauri',
+                  'Virtual Machines',
+                  'GitHub',
+                  'Git',
+                  'Miro',
+                  'Canva',
+                  'Adobe Creative Cloud',
+                  'Adobe Photoshop',
+                  'Adobe Illustrator',
+                  'Adobe XD',
+                  'Adobe Premiere',
+                  'Final Cut',
+                  'Logic Pro'
+                ].map((s) => (
                   <span key={s}>{s}</span>
                 ))}
               </div>
@@ -317,7 +353,7 @@ export default function Home() {
                 <h2>Skills and experience</h2>
               </div>
               <div className="pill-group">
-                {['Product Design','Design Systems','User Experience & Interfaces','AI Agents and UI Prototyping','Systems and Stacks','Graphic Design','Visual Communication','Color Theory and Systems Design','Design Principles','Communication & Collaboration','Accessibility & Best Practices','Web Design & Development','Responsive Mobile Web','Typography','Photography','Videography','Video Editing'].map((s) => (
+                {['Product Design','Design Systems','User Experience','User Interfaces','Agentic Software Design','AI Agents','UI Prototyping','Systems and Stacks','Graphic Design','Visual Communication','Color Theory','Design Systems','Design Principles','Communication','Collaboration','Accessibility','Best Practices','Web Design & Development','Responsive Design','Mobile Web','Typography','Photography','Videography','Video Editing','3D Printing'].map((s) => (
                   <span key={s}>{s}</span>
                 ))}
               </div>
