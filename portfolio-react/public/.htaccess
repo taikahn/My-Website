@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /
+
+# Canonicalize accidental /portfolio requests back to the root-hosted app
+RewriteRule ^portfolio/?$ / [R=301,L]
+RewriteRule ^portfolio/(.*)$ /$1 [R=301,L]
+
+# If the requested file or directory exists, serve it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Otherwise, rewrite to index.html for client-side routing
+RewriteRule ^ index.html [QSA,L]

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tai Kahn — Portfolio</title>
+    <meta
+      name="description"
+      content="Visual design portfolio for Tai Kahn featuring product design, design systems, AI UI workflows, web design, photography, and software experience."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="#top">Tai Kahn</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="site-nav" class="site-nav">
+          <a href="#case-studies">Case Studies</a>
+          <a href="#about">About</a>
+          <a href="#services">Expertise</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero premium-hero">
+        <div class="container hero-grid premium-hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Visual Design Portfolio 2026</p>
+            <h1 class="hero-title" data-title="Product design for complex software, systems, and modern web experiences.">
+              <span class="hero-title-base">Product design for complex software, systems, and modern web experiences.</span>
+              <span class="hero-title-overlay" aria-hidden="true">
+                <span class="hero-title-overlay-text">Product design for complex software, systems, and modern web experiences.</span>
+              </span>
+            </h1>
+            <p class="lede">
+              I help turn complicated products into clearer, more usable experiences through interface design,
+              systems thinking, responsive execution, and close alignment with how things actually get built.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#case-studies">View case studies</a>
+              <a class="button button-secondary" href="#about">About me</a>
+            </div>
+            <div class="hero-proof">
+              <span>Apple</span>
+              <span>Ping Identity</span>
+              <span>Strata Identity</span>
+              <span>Enterprise SaaS</span>
+            </div>
+          </div>
+          <div class="hero-visual-stack">
+            <div class="hero-visual card spotlight hero-main-visual">
+              <img src="assets/ai_agentic_hex_dark_light.jpg" alt="AI agentic interface designs in dark and light mode" />
+            </div>
+            <div class="hero-side-stat card">
+              <span class="metric-label">Focus</span>
+              <strong>UX/UI, design systems, product thinking, responsive interfaces</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="case-studies" class="section">
+        <div class="container">
+          <div class="section-heading section-heading-split">
+            <div>
+              <p class="eyebrow">Featured work</p>
+              <h2>Selected case studies</h2>
+            </div>
+            <p class="section-intro">
+              A selection of product, systems, and AI workflow work focused on complex software, implementation-aware design,
+              and clearer user experience at scale.
+            </p>
+          </div>
+
+          <div class="case-study-grid">
+            <article class="case-card card premium-case-card">
+              <div class="case-image">
+                <img src="assets/ai_agentic_hex_dark_light.jpg" alt="Maverics product design case study preview" />
+              </div>
+              <div class="case-body">
+                <div class="case-meta-row">
+                  <span>Enterprise SaaS</span>
+                  <span>5 years</span>
+                </div>
+                <img class="mini-logo" src="assets/maverics-logo.svg" alt="Maverics logo" />
+                <h3>Case Study: Maverics Product Design</h3>
+                <p>
+                  Led interface evolution for a next-generation identity orchestration platform, helping move the product
+                  from exploratory wireframes into a more mature, production-ready enterprise experience.
+                </p>
+                <ul class="case-highlights">
+                  <li>Navigation and workflow clarity</li>
+                  <li>Reusable product patterns</li>
+                  <li>Design decisions aligned with implementation</li>
+                </ul>
+                <a class="text-link" href="case-study-maverics.html">Read case study</a>
+              </div>
+            </article>
+
+            <article class="case-card card premium-case-card">
+              <div class="case-image">
+                <img src="assets/variable_color_system_dark_light.jpg" alt="Complex design systems preview" />
+              </div>
+              <div class="case-body">
+                <div class="case-meta-row">
+                  <span>Design Systems</span>
+                  <span>Figma + React</span>
+                </div>
+                <img class="mini-logo" src="assets/signin-logo.svg" alt="Strata logo" />
+                <h3>Case Study: Complex Design Systems</h3>
+                <p>
+                  Built scalable design systems with variables, theme logic, component state coverage, and a more useful
+                  developer-facing reference tied closely to shipped product reality.
+                </p>
+                <ul class="case-highlights">
+                  <li>Dark / light mode variables</li>
+                  <li>Component state coverage</li>
+                  <li>Shared language for design and engineering</li>
+                </ul>
+                <a class="text-link" href="case-study-design-systems.html">Read case study</a>
+              </div>
+            </article>
+
+            <article class="case-card card premium-case-card">
+              <div class="case-image">
+                <img src="assets/maverics-via-cursor-react-vite-node-scaled.jpg" alt="AI tools for live user interfaces preview" />
+              </div>
+              <div class="case-body">
+                <div class="case-meta-row">
+                  <span>AI Workflow</span>
+                  <span>React / Vite</span>
+                </div>
+                <img class="mini-logo" src="assets/signin-logo.svg" alt="Strata logo" />
+                <h3>Case Study: Using AI Tools for Live User Interfaces</h3>
+                <p>
+                  Explored an AI-assisted workflow for designing directly in code, making responsive behavior,
+                  interactions, and implementation intent far more visible during the design process.
+                </p>
+                <ul class="case-highlights">
+                  <li>Live responsive prototyping</li>
+                  <li>Stronger design-to-dev handoff</li>
+                  <li>Implementation-aware exploration</li>
+                </ul>
+                <a class="text-link" href="case-study-ai-ui.html">Read case study</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section section-muted">
+        <div class="container about-grid">
+          <div class="about-copy">
+            <div class="section-heading left">
+              <p class="eyebrow">About</p>
+              <h2>Adaptive, experienced, and deeply comfortable with complex products</h2>
+            </div>
+            <p>
+              I am a highly adaptive and experienced creative whose career began at Apple, where I helped implement
+              designs using code into products like iTunes and Mac OS X. At Ping Identity, I designed the interface for
+              and provided front-end code for an industry-first GUI of PingFederate, their flagship identity product.
+            </p>
+            <p>
+              Over the last five years at Strata Identity, I designed the interface for their cloud-based Maverics
+              Identity Orchestration Platform in Figma, helping progress the product from wireframes through hi-fi pages
+              and ultimately into a live customer-facing platform.
+            </p>
+            <p>
+              Across that work I designed each stage of the interface, organized complex pathways, built prototypes,
+              created multiple design systems, maintained variable color systems for dark and light modes, and helped the
+              team continually improve user experience through iteration, research, feedback, and testing.
+            </p>
+            <p>
+              Outside of work I enjoy the mountains, riding bicycles, skateboarding, making music, and flying FPV
+              drones.
+            </p>
+          </div>
+          <aside class="about-panel card">
+            <div class="about-panel-inner">
+              <div>
+                <p class="summary-label">Background</p>
+                <p>Apple, Ping Identity, Strata Identity, startups, product interfaces, web, and visual design.</p>
+              </div>
+              <div>
+                <p class="summary-label">Strengths</p>
+                <p>Complex software, design systems, implementation awareness, visual quality, and cross-functional collaboration.</p>
+              </div>
+              <div>
+                <p class="summary-label">Availability</p>
+                <p>Currently available for product design, UX/UI, systems, and modern web interface work.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Recommendations</p>
+            <h2>What collaborators have said</h2>
+          </div>
+          <div class="testimonial-grid">
+            <article class="testimonial card">
+              <p class="testimonial-quote">
+                Over the past four+ years, Tai has been one of the most impactful and reliable Senior UX/UI Designers I’ve
+                had the privilege of working with. He quickly became indispensable—designing clean, scalable, and
+                thoughtful user experiences for an exceptionally complex product.
+              </p>
+              <p class="testimonial-credit">Jason Bowers — Lead Experience & Creative Designer at Strata Identity</p>
+            </article>
+            <article class="testimonial card">
+              <p class="testimonial-quote">
+                What sets Tai apart is that he thinks like both a designer and a builder. He cares deeply about how
+                something looks and feels, but he’s equally focused on whether it works, scales, and delivers value.
+              </p>
+              <p class="testimonial-credit">Michel Khalil — Principal, Creative Director at theDESIGNsnobs</p>
+            </article>
+            <article class="testimonial card">
+              <p class="testimonial-quote">
+                Tai has an expert level understanding of the Identity domain and excellent design skills, always
+                delivering with high-quality aesthetics while adapting to products that evolve rapidly.
+              </p>
+              <p class="testimonial-credit">Darren Platt — VP of Engineering at Strata Identity</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section section-muted">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">What I do</p>
+            <h2>Core areas of expertise</h2>
+          </div>
+
+          <div class="three-up">
+            <article class="info-card card">
+              <h3>Product Design</h3>
+              <p>
+                I design interfaces and product flows with a strong focus on clarity, usability, hierarchy, navigation,
+                and systems that can scale as products grow more complex.
+              </p>
+            </article>
+
+            <article class="info-card card">
+              <h3>Web Design</h3>
+              <p>
+                I build and design websites across platforms including WordPress, Elementor, Shopify, Squarespace,
+                HTML/CSS, and modern front-end workflows, balancing communication, speed, quality, and practicality.
+              </p>
+            </article>
+
+            <article class="info-card card">
+              <h3>Photography</h3>
+              <p>
+                I use product and landscape photography as part of the overall design toolkit, helping bring visual
+                originality and stronger storytelling into digital experiences.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="section">
+        <div class="container">
+          <div class="section-heading section-heading-split">
+            <div>
+              <p class="eyebrow">Visual examples</p>
+              <h2>Portfolio gallery</h2>
+            </div>
+            <p class="section-intro">
+              A broader mix of interface explorations, web work, systems thinking, and visual experiments across product,
+              photography, and digital design.
+            </p>
+          </div>
+
+          <div class="gallery-grid lightbox-gallery">
+            <figure class="gallery-item card"><button class="gallery-button" type="button"><img src="assets/strata_maverics_agent_entry.jpg" alt="Strata Maverics Agentic Entry" /></button></figure>
+            <figure class="gallery-item card"><button class="gallery-button" type="button"><img src="assets/ai_agentic_hex_dark_light.jpg" alt="AI Agentic Agents Dark and Light Mode" /></button></figure>
+            <figure class="gallery-item card"><button class="gallery-button" type="button"><img src="assets/agentic_agents_fabric_dark.jpg" alt="Agent Fabric Dark Mode" /></button></figure>
+            <figure class="gallery-item card"><button class="gallery-button" type="button"><img src="assets/dataviz_maverics.jpg" alt="Data Viz Maverics" /></button></figure>
+            <figure class="gallery-item card"><button class="gallery-button" type="button"><img src="assets/total_energy_group.jpg" alt="Total Energy Group website" /></button></figure>
+            <figure class="gallery-item card"><button class="gallery-button" type="button"><img src="assets/signet_capital_advisors.jpg" alt="Signet Capital Advisors website" /></button></figure>
+            <figure class="gallery-item card portrait"><button class="gallery-button" type="button"><img src="assets/davinci3.jpg" alt="Artwork sample one" /></button></figure>
+            <figure class="gallery-item card portrait"><button class="gallery-button" type="button"><img src="assets/davinci1.jpg" alt="Artwork sample two" /></button></figure>
+            <figure class="gallery-item card portrait"><button class="gallery-button" type="button"><img src="assets/Screen-Shot-2021-02-13-at-9.25.50-AM.png" alt="Design screenshot one" /></button></figure>
+            <figure class="gallery-item card portrait"><button class="gallery-button" type="button"><img src="assets/Screen-Shot-2021-02-13-at-9.26.45-AM.png" alt="Design screenshot two" /></button></figure>
+            <figure class="gallery-item card"><button class="gallery-button" type="button"><img src="assets/photos_unsplash_views.jpg" alt="Unsplash photography views" /></button></figure>
+            <figure class="gallery-item card"><button class="gallery-button" type="button"><img src="assets/colorado_snow_guitar.jpg" alt="Colorado Snow Guitar photography" /></button></figure>
+            <figure class="gallery-item card"><button class="gallery-button" type="button"><img src="assets/IMG_0189.jpg" alt="Landscape photography" /></button></figure>
+            <figure class="gallery-item card portrait"><button class="gallery-button" type="button"><img src="assets/davinci2.jpg" alt="Artwork sample three" /></button></figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section section-muted">
+        <div class="container skills-layout">
+          <div>
+            <div class="section-heading left">
+              <p class="eyebrow">Toolkit</p>
+              <h2>Software experience</h2>
+            </div>
+            <div class="pill-group">
+              <span>Figma</span><span>Affinity</span><span>Adobe Creative Cloud</span><span>Adobe Photoshop</span>
+              <span>Adobe Illustrator</span><span>Adobe XD</span><span>Adobe InDesign</span><span>Cursor</span>
+              <span>VSCode</span><span>WordPress / Elementor</span><span>Miro</span><span>Canva</span>
+              <span>HTML</span><span>CSS</span><span>Cline</span><span>Vite / React</span><span>Terminal / CLI</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="section-heading left">
+              <p class="eyebrow">Capabilities</p>
+              <h2>Skills and experience</h2>
+            </div>
+            <div class="pill-group">
+              <span>Product Design</span><span>Design Systems</span><span>User Experience & Interfaces</span>
+              <span>AI Agents and UI Prototyping</span><span>Systems and Stacks</span><span>Graphic Design</span>
+              <span>Visual Communication</span><span>Color Theory and Systems Design</span><span>Design Principles</span>
+              <span>Communication & Collaboration</span><span>Accessibility & Best Practices</span>
+              <span>Web Design & Development</span><span>Responsive Mobile Web</span><span>Typography</span>
+              <span>Photography</span><span>Videography</span><span>Video Editing</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="notice card">
+            <p>
+              This portfolio is currently under construction. New sections and work examples are being added regularly.
+              If you need examples of anything you don't see here, please contact me.
+            </p>
+            <p class="notice-meta">Last updated by Tai Kahn on 3/16/2026</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="container footer-shell card">
+        <div class="footer-grid footer-grid-form">
+          <div class="footer-copy">
+            <p class="eyebrow">Start a conversation</p>
+            <h2>Let’s make something thoughtful and useful.</h2>
+            <p class="footer-lede">
+              Share a little about your project, team, or timeline and I’ll have a clear starting point for the conversation.
+            </p>
+            <div class="contact-list contact-list-muted">
+              <a href="https://www.linkedin.com/in/taikahn/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+          </div>
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-row two-up">
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80" />
+                <p class="field-hint">Please enter your full name.</p>
+                <p class="field-error" id="name-error" aria-live="polite"></p>
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="120" />
+                <p class="field-hint">I’ll use this to reply.</p>
+                <p class="field-error" id="email-error" aria-live="polite"></p>
+              </div>
+            </div>
+            <div class="form-row two-up">
+              <div class="form-field">
+                <label for="company">Company or team</label>
+                <input id="company" name="company" type="text" autocomplete="organization" maxlength="120" />
+                <p class="field-hint">Optional, but helpful for context.</p>
+                <p class="field-error" id="company-error" aria-live="polite"></p>
+              </div>
+              <div class="form-field">
+                <label for="project-type">Project type</label>
+                <select id="project-type" name="projectType" required>
+                  <option value="">Select one</option>
+                  <option value="product-design">Product design</option>
+                  <option value="design-system">Design system</option>
+                  <option value="website">Website</option>
+                  <option value="ux-audit">UX/UI audit</option>
+                  <option value="other">Something else</option>
+                </select>
+                <p class="field-hint">Pick the closest fit.</p>
+                <p class="field-error" id="project-type-error" aria-live="polite"></p>
+              </div>
+            </div>
+            <div class="form-row two-up">
+              <div class="form-field">
+                <label for="timeline">Timeline</label>
+                <select id="timeline" name="timeline" required>
+                  <option value="">Select one</option>
+                  <option value="asap">ASAP</option>
+                  <option value="2-4-weeks">2–4 weeks</option>
+                  <option value="1-2-months">1–2 months</option>
+                  <option value="exploring">Just exploring</option>
+                </select>
+                <p class="field-hint">This helps with availability.</p>
+                <p class="field-error" id="timeline-error" aria-live="polite"></p>
+              </div>
+              <div class="form-field">
+                <label for="budget">Budget range</label>
+                <select id="budget" name="budget" required>
+                  <option value="">Select one</option>
+                  <option value="under-5k">Under $5k</option>
+                  <option value="5k-15k">$5k–$15k</option>
+                  <option value="15k-30k">$15k–$30k</option>
+                  <option value="30k-plus">$30k+</option>
+                </select>
+                <p class="field-hint">A rough range is enough.</p>
+                <p class="field-error" id="budget-error" aria-live="polite"></p>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="message">Project details</label>
+                <textarea id="message" name="message" rows="6" required minlength="30" maxlength="1200"></textarea>
+                <div class="field-meta-row">
+                  <p class="field-hint">Include goals, scope, or what you need help with.</p>
+                  <p class="field-counter"><span id="message-count">0</span>/1200</p>
+                </div>
+                <p class="field-error" id="message-error" aria-live="polite"></p>
+              </div>
+            </div>
+            <div class="form-row">
+              <label class="checkbox-field" for="consent">
+                <input id="consent" name="consent" type="checkbox" required />
+                <span>I’m okay with being contacted in response to this message.</span>
+              </label>
+              <p class="field-error" id="consent-error" aria-live="polite"></p>
+            </div>
+            <div class="form-actions">
+              <button class="button button-primary" type="submit">Send inquiry</button>
+              <p class="form-status" id="form-status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button" aria-label="Close image viewer">×</button>
+      <button class="lightbox-prev" type="button" aria-label="Previous image">&#8249;</button>
+      <img class="lightbox-image" src="" alt="" />
+      <button class="lightbox-next" type="button" aria-label="Next image">&#8250;</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

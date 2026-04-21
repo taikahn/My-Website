@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complex Design Systems — Tai Kahn</title>
+    <meta
+      name="description"
+      content="Case study covering design systems work, multi-mode variables, Figma systems, and developer-facing UI component documentation."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">Tai Kahn</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="site-nav" class="site-nav">
+          <a href="index.html#case-studies">Case Studies</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#services">Expertise</a>
+          <a href="index.html#gallery">Gallery</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero case-hero">
+        <div class="container case-hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">Case Study</p>
+            <h1>Complex Design Systems</h1>
+            <p class="lede">
+              Building design systems that serve both product design and engineering requires more than a UI library.
+              It requires structure, naming discipline, states, theming logic, and practical documentation.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="index.html#case-studies">Back to portfolio</a>
+            </div>
+          </div>
+          <div class="hero-visual card spotlight">
+            <img src="assets/variable_color_system_dark_light.jpg" alt="Design systems dark and light mode preview" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-intro">
+        <div class="container">
+          <div class="metrics-strip">
+            <div class="metric card"><span class="metric-label">Scope</span><strong>Multi-system UI library</strong></div>
+            <div class="metric card"><span class="metric-label">Modes</span><strong>Dark / Light variables</strong></div>
+            <div class="metric card"><span class="metric-label">Tools</span><strong>Figma + React reference</strong></div>
+            <div class="metric card"><span class="metric-label">Audience</span><strong>Design + Engineering</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container story-grid">
+          <aside class="summary card">
+            <div class="summary-inner">
+              <img class="mini-logo" src="assets/signin-logo.svg" alt="Strata logo" />
+              <div>
+                <p class="summary-label">Role</p>
+                <p>Design systems, Figma architecture, UI documentation, engineering alignment</p>
+              </div>
+              <div>
+                <p class="summary-label">Focus</p>
+                <p>Variables, dark/light modes, shared patterns, live component states</p>
+              </div>
+              <div>
+                <p class="summary-label">Deliverable</p>
+                <p>Designer-facing systems plus a React-specific developer version with commented live elements</p>
+              </div>
+              <div>
+                <p class="summary-label">Goal</p>
+                <p>Reduce design inconsistency and make implementation more understandable and efficient</p>
+              </div>
+            </div>
+          </aside>
+
+          <div class="story-content">
+            <div class="section-heading left">
+              <p class="eyebrow">Overview</p>
+              <h2>Creating systems that reduce friction</h2>
+            </div>
+            <p>
+              At Strata Identity I created multiple Figma-based design systems that helped organize the product UI into
+              reusable, predictable, and scalable patterns. A major part of the work involved variables and token-like
+              structures that made dark and light mode management far more efficient.
+            </p>
+            <p>
+              Beyond the design library, I also built a React-oriented system view focused on what was actually live.
+              That meant engineering could reference the most relevant elements in their current states rather than
+              sorting through an overly abstract system disconnected from production reality.
+            </p>
+
+            <div class="editorial-block card">
+              <p class="quote-mark">“</p>
+              <p class="editorial-quote">
+                A useful design system is not just organized. It is interpretable, maintainable, and close enough to
+                production that teams can actually trust it.
+              </p>
+            </div>
+
+            <div class="section-heading left top-gap">
+              <p class="eyebrow">Problem</p>
+              <h2>Bridging the gap between design libraries and shipped UI</h2>
+            </div>
+            <p>
+              Many systems fail because they become either too abstract for developers or too incomplete for designers.
+              The challenge here was to create a system that felt flexible enough for exploration while still being
+              concrete enough to support implementation, theming, and daily product decisions.
+            </p>
+
+            <div class="section-heading left top-gap">
+              <p class="eyebrow">System principles</p>
+              <h2>Useful, documented, and close to implementation</h2>
+            </div>
+            <div class="detail-grid">
+              <article class="detail-card card">
+                <h3>Theme flexibility</h3>
+                <p>
+                  Variables allowed visual updates to cascade cleanly across components, improving consistency and making
+                  multi-mode design much easier to manage.
+                </p>
+              </article>
+              <article class="detail-card card">
+                <h3>State coverage</h3>
+                <p>
+                  Components were organized with attention to hover, selected, disabled, empty, and other real product
+                  states that often get overlooked in superficial systems.
+                </p>
+              </article>
+              <article class="detail-card card">
+                <h3>Developer clarity</h3>
+                <p>
+                  A more practical, commented React version made it easier for engineering to understand intent, locate
+                  live UI pieces, and align implementation with design decisions.
+                </p>
+              </article>
+            </div>
+
+            <div class="section-heading left top-gap">
+              <p class="eyebrow">What the system included</p>
+              <h2>Structures that made the work reusable</h2>
+            </div>
+            <div class="check-grid">
+              <div class="check-item card"><strong>Variables and modes</strong><p>Theme-aware foundations that supported fast transitions between dark and light interfaces.</p></div>
+              <div class="check-item card"><strong>Component states</strong><p>Coverage for real-world interaction scenarios instead of idealized UI only.</p></div>
+              <div class="check-item card"><strong>Live references</strong><p>A React-oriented version that reflected current implementation reality.</p></div>
+              <div class="check-item card"><strong>Documentation value</strong><p>Clearer system communication for designers and engineers working together.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Screens</p>
+            <h2>Selected visuals</h2>
+          </div>
+          <div class="gallery-grid case-gallery editorial-gallery">
+            <figure class="gallery-item card feature-wide"><img src="https://taikahn.com/wp-content/uploads/2025/11/design_elements_items.jpg" alt="Design elements items" /></figure>
+            <figure class="gallery-item card portrait"><img src="https://taikahn.com/wp-content/uploads/2025/11/design_elements_navicons_darklight.jpg" alt="Design elements navigation icons dark and light" /></figure>
+            <figure class="gallery-item card portrait"><img src="https://taikahn.com/wp-content/uploads/2025/11/variable_color_system_dark_light.jpg" alt="Variable color system dark and light" /></figure>
+            <figure class="gallery-item card portrait"><img src="https://taikahn.com/wp-content/uploads/2025/11/design_elements_icons.jpg" alt="Design elements icons" /></figure>
+            <figure class="gallery-item card portrait"><img src="https://taikahn.com/wp-content/uploads/2025/11/design_elements_searchcard.jpg" alt="Design elements search card" /></figure>
+            <figure class="gallery-item card portrait"><img src="https://taikahn.com/wp-content/uploads/2025/11/monogram_badges_mercury.jpg" alt="Monogram badges Mercury" /></figure>
+            <figure class="gallery-item card portrait"><img src="https://taikahn.com/wp-content/uploads/2025/11/modals_dialogs_mercury.jpg" alt="Modals and dialogs Mercury" /></figure>
+            <figure class="gallery-item card portrait"><img src="https://taikahn.com/wp-content/uploads/2025/11/search_range_filter_mercury_darklight.jpg" alt="Search range filter Mercury dark and light" /></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container narrow-copy case-ending">
+          <div class="section-heading left">
+            <p class="eyebrow">Outcome</p>
+            <h2>A design system that worked for both design and code</h2>
+          </div>
+          <p>
+            The most valuable systems are the ones people actually use. This work aimed to make the system practical,
+            navigable, and directly useful to multiple audiences: designers shaping new work and developers building and
+            maintaining the shipped interface.
+          </p>
+          <p>
+            The result was better consistency, more understandable component logic, and a stronger shared foundation for
+            collaboration between design and engineering.
+          </p>
+          <p>
+            By pairing visual consistency with implementation awareness, the system became more than a style guide. It
+            became a shared product language.
+          </p>
+        </div>
+      </section>
+
+      <footer class="case-footer">
+        <div class="container case-footer-grid">
+          <a class="case-nav-card card" href="case-study-maverics.html">
+            <span class="case-nav-label">Previous case study</span>
+            <strong>Maverics Product Design</strong>
+          </a>
+          <a class="case-nav-card card" href="case-study-ai-ui.html">
+            <span class="case-nav-label">Next case study</span>
+            <strong>Using AI Tools for Live UI</strong>
+          </a>
+        </div>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
