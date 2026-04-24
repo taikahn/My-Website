@@ -678,6 +678,10 @@ h3 {
   padding: 1.35rem;
 }
 
+.info-card {
+  gap: 0.75rem;
+}
+
 .case-body {
   display: grid;
   gap: 0.95rem;
