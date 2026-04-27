@@ -76,7 +76,7 @@ export default function useHeroTyping(titleText) {
       const delay = index * (LINE_DURATION + LINE_GAP);
 
       line.className = 'hero-title-line';
-      line.style.top = `calc(${top}px + ${LINE_OFFSET}em)`;
+      line.style.top = `calc(${top}px + ${LINE_OFFSET}em + 2px)`;
       line.style.animationDuration = `${LINE_DURATION}s`;
       line.style.animationDelay = `${delay}s`;
 
