@@ -41,6 +41,7 @@
     linear-gradient(180deg, #08101e 0%, #0b1020 45%, #0d1324 100%);
   --card-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.03));
   --section-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.018));
+  --pill-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025));
   --footer-gradient:
     radial-gradient(circle at top right, rgba(125, 211, 252, 0.14), transparent 30%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.035));
@@ -100,6 +101,7 @@
     linear-gradient(180deg, #fcf9f5 0%, #f4efe9 48%, #ede4d8 100%);
   --card-gradient: linear-gradient(180deg, rgba(255, 252, 248, 0.9), rgba(255, 249, 243, 0.68));
   --section-gradient: linear-gradient(180deg, rgba(255, 252, 248, 0.38), rgba(255, 248, 241, 0.18));
+  --pill-gradient: linear-gradient(180deg, rgba(60, 49, 49, 0.06), rgba(60, 49, 49, 0.022));
   --footer-gradient:
     radial-gradient(circle at top right, rgba(107, 135, 166, 0.12), transparent 30%),
     linear-gradient(180deg, rgba(255, 252, 248, 0.68), rgba(255, 248, 241, 0.4));
@@ -337,7 +339,7 @@ button:focus-visible {
   border-color: var(--border-strong);
   background: linear-gradient(180deg, var(--surface-strong), var(--surface-muted));
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 12px 26px rgba(0, 0, 0, 0.08), var(--shadow-soft);
-  transform: translateY(-1px);
+  transform: translateX(1px);
 }
 
 .theme-toggle:hover .theme-toggle-thumb,
@@ -575,7 +577,7 @@ h3 {
 }
 
 .button:hover {
-  transform: translateY(-2px);
+  transform: translateX(2px);
 }
 
 .button-primary:hover,
@@ -697,10 +699,9 @@ h3 {
 }
 
 .case-meta-row span {
-  padding: 0.35rem 0.7rem;
-  border-radius: 999px;
-  border: 1px solid var(--nav-hover-border);
-  background: var(--surface-muted);
+  padding: 0.32rem 0.7rem;
+  border-radius: 10px;
+  background: var(--pill-gradient);
 }
 
 .case-body .button {
@@ -731,7 +732,7 @@ h3 {
 
 .premium-case-card:hover,
 .premium-case-card:focus-within {
-  transform: translateY(-3px);
+  transform: translateX(2px);
   border-color: var(--border-strong);
   box-shadow: var(--shadow-lifted);
 }
@@ -826,13 +827,12 @@ h3 {
 }
 
 .hero-proof span {
-  padding: 0.5rem 0.85rem;
-  border-radius: 999px;
-  border: 1px solid var(--nav-hover-border);
-  background: var(--surface-muted);
-  color: var(--text-strong);
-  font-size: 0.82rem;
-  letter-spacing: 0.02em;
+  padding: 0.34rem 0.7rem;
+  border-radius: 10px;
+  background: var(--pill-gradient);
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
 }
 
 .hero-side-stat {
@@ -900,7 +900,7 @@ h3 {
 
 .gallery-item:hover,
 .gallery-item:focus-within {
-  transform: translateY(-4px);
+  transform: translateX(2px);
   border-color: var(--border-strong);
   box-shadow: var(--shadow-gallery);
 }
@@ -947,12 +947,12 @@ h3 {
 }
 
 .pill-group span {
-  padding: 0.75rem 0.95rem;
-  border-radius: 999px;
-  background: var(--surface);
-  border: 1px solid var(--border-soft);
+  padding: 0.5rem 0.85rem;
+  border-radius: 10px;
+  background: var(--pill-gradient);
   color: var(--text);
-  font-size: 0.94rem;
+  font-size: 0.88rem;
+  letter-spacing: 0.01em;
 }
 
 .notice {
@@ -1010,7 +1010,7 @@ h3 {
 .contact-list a:focus-visible {
   background: var(--surface-hover);
   border-color: var(--border-strong);
-  transform: translateY(-1px);
+  transform: translateX(2px);
 }
 
 .case-hero {
@@ -1094,6 +1094,13 @@ h3 {
   padding: 1rem 1.1rem;
   display: grid;
   gap: 0.45rem;
+}
+
+.metric.card {
+  background: var(--pill-gradient);
+  border: 0;
+  box-shadow: none;
+  border-radius: 12px;
 }
 
 .metric-label {

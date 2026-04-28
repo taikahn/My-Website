@@ -108,7 +108,7 @@ export default function Home() {
                   <img src="/assets/agentic-interface-dark-light.jpg" alt="Maverics product design case study preview" />
                 </div>
                 <div className="case-body">
-                  <div className="case-meta-row"><span>Enterprise SaaS</span><span>5 years</span></div>
+                  <div className="case-meta-row"><span>Figma</span><span>Enterprise SaaS</span><span>5 years</span></div>
                   <img className="mini-logo" src="/assets/maverics-logo.svg" alt="Maverics logo" />
                   <h3>Case Study: Maverics Product Design</h3>
                   <p>
@@ -129,7 +129,7 @@ export default function Home() {
                   <img src="/assets/color-system-dark-light.jpg" alt="Complex design systems preview" />
                 </div>
                 <div className="case-body">
-                  <div className="case-meta-row"><span>Design Systems</span><span>Figma + React</span></div>
+                  <div className="case-meta-row"><span>Design Systems</span><span>Figma</span><span>React</span></div>
                   <img className="mini-logo" src="/assets/strata-logo.svg" alt="Strata logo" />
                   <h3>Case Study: Complex Design Systems</h3>
                   <p>
@@ -150,7 +150,7 @@ export default function Home() {
                   <img src="/assets/ai-assisted-react-workflow.jpg" alt="AI tools for live user interfaces preview" />
                 </div>
                 <div className="case-body">
-                  <div className="case-meta-row"><span>AI Workflow</span><span>React / Vite</span></div>
+                  <div className="case-meta-row"><span>AI Workflow</span><span>React</span><span>NPM + Node</span></div>
                   <img className="mini-logo" src="/assets/strata-logo.svg" alt="Strata logo" />
                   <h3>Case Study: Using AI Tools for Live User Interfaces</h3>
                   <p>
