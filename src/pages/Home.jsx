@@ -217,7 +217,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials */}
-        <section className="section">
+        <section id="recommendations" className="section">
           <div className="container">
             <div className="section-heading">
               <p className="eyebrow">Recommendations</p>

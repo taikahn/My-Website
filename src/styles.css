@@ -1649,3 +1649,439 @@ h3 {
     align-items: stretch;
   }
 }
+
+/* ---------------------------------------------------------------
+   "What I do" / #services — scoped sage accent.
+   Additive only. Reuses existing tokens as fallbacks so nothing
+   else on the page is affected.
+   --------------------------------------------------------------- */
+:root {
+  --services-accent: #86c9a5;
+  --services-accent-strong: #5fae86;
+  --services-wash: rgba(134, 201, 165, 0.11);
+  --services-glow: rgba(134, 201, 165, 0.22);
+  --services-edge: rgba(134, 201, 165, 0.28);
+  --services-card-bg: linear-gradient(
+    180deg,
+    rgba(134, 201, 165, 0.07),
+    rgba(255, 255, 255, 0.025)
+  );
+  --services-card-border: rgba(134, 201, 165, 0.18);
+  --services-card-border-hover: rgba(134, 201, 165, 0.42);
+  --services-card-shadow-hover: 0 20px 44px rgba(40, 96, 70, 0.32);
+}
+
+:root[data-theme='light'] {
+  --services-accent: #5a8568;
+  --services-accent-strong: #436a4f;
+  --services-wash: rgba(90, 133, 104, 0.085);
+  --services-glow: rgba(90, 133, 104, 0.16);
+  --services-edge: rgba(90, 133, 104, 0.26);
+  --services-card-bg: linear-gradient(
+    180deg,
+    rgba(90, 133, 104, 0.055),
+    rgba(255, 252, 248, 0.55)
+  );
+  --services-card-border: rgba(90, 133, 104, 0.18);
+  --services-card-border-hover: rgba(90, 133, 104, 0.36);
+  --services-card-shadow-hover: 0 18px 40px rgba(58, 86, 67, 0.14);
+}
+
+#services.section-muted {
+  position: relative;
+  background:
+    radial-gradient(circle at 18% 0%, var(--services-glow), transparent 42%),
+    radial-gradient(circle at 88% 8%, var(--services-glow), transparent 38%),
+    linear-gradient(180deg, var(--services-wash), transparent 78%),
+    var(--section-gradient);
+  border-top-color: var(--services-edge);
+  border-bottom-color: var(--services-edge);
+}
+
+#services .eyebrow {
+  color: var(--services-accent);
+}
+
+#services .info-card.card {
+  position: relative;
+  background: var(--services-card-bg);
+  border-color: var(--services-card-border);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    background 220ms ease;
+}
+
+#services .info-card.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1.1rem;
+  right: 1.1rem;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--services-accent) 22%,
+    var(--services-accent) 78%,
+    transparent
+  );
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+#services .info-card.card:hover,
+#services .info-card.card:focus-within {
+  transform: translateX(2px);
+  border-color: var(--services-card-border-hover);
+  box-shadow: var(--services-card-shadow-hover);
+}
+
+#services .info-card.card:hover::before,
+#services .info-card.card:focus-within::before {
+  opacity: 1;
+}
+
+/* ---------------------------------------------------------------
+   "Recommendations" / #recommendations — scoped silver/graphite accent.
+   Section is not .section-muted on the page, so the wash is added
+   here from scratch, calibrated lighter than #services so it doesn't
+   over-punch against the bare page background.
+   --------------------------------------------------------------- */
+:root {
+  --recs-accent: #cfd6dd;
+  --recs-accent-strong: #a9b3bd;
+  --recs-wash: rgba(207, 214, 221, 0.08);
+  --recs-glow: rgba(207, 214, 221, 0.16);
+  --recs-edge: rgba(207, 214, 221, 0.22);
+  --recs-card-bg: linear-gradient(
+    180deg,
+    rgba(207, 214, 221, 0.06),
+    rgba(255, 255, 255, 0.025)
+  );
+  --recs-card-border: rgba(207, 214, 221, 0.18);
+  --recs-card-border-hover: rgba(207, 214, 221, 0.4);
+  --recs-card-shadow-hover: 0 20px 44px rgba(20, 28, 42, 0.42);
+}
+
+:root[data-theme='light'] {
+  --recs-accent: #6b7480;
+  --recs-accent-strong: #4f5862;
+  --recs-wash: rgba(107, 116, 128, 0.07);
+  --recs-glow: rgba(107, 116, 128, 0.13);
+  --recs-edge: rgba(107, 116, 128, 0.22);
+  --recs-card-bg: linear-gradient(
+    180deg,
+    rgba(107, 116, 128, 0.05),
+    rgba(255, 252, 248, 0.55)
+  );
+  --recs-card-border: rgba(107, 116, 128, 0.18);
+  --recs-card-border-hover: rgba(107, 116, 128, 0.34);
+  --recs-card-shadow-hover: 0 18px 40px rgba(50, 58, 70, 0.13);
+}
+
+#recommendations {
+  position: relative;
+  background:
+    radial-gradient(circle at 18% 0%, var(--recs-glow), transparent 42%),
+    radial-gradient(circle at 88% 8%, var(--recs-glow), transparent 38%),
+    linear-gradient(180deg, var(--recs-wash), transparent 78%);
+  border-top: 1px solid var(--recs-edge);
+  border-bottom: 1px solid var(--recs-edge);
+}
+
+#recommendations .eyebrow {
+  color: var(--recs-accent);
+}
+
+#recommendations .testimonial.card {
+  position: relative;
+  background: var(--recs-card-bg);
+  border-color: var(--recs-card-border);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    background 220ms ease;
+}
+
+#recommendations .testimonial.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1.1rem;
+  right: 1.1rem;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--recs-accent) 22%,
+    var(--recs-accent) 78%,
+    transparent
+  );
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#recommendations .testimonial.card:hover,
+#recommendations .testimonial.card:focus-within {
+  transform: translateX(2px);
+  border-color: var(--recs-card-border-hover);
+  box-shadow: var(--recs-card-shadow-hover);
+}
+
+#recommendations .testimonial.card:hover::before,
+#recommendations .testimonial.card:focus-within::before {
+  opacity: 1;
+}
+
+/* ---------------------------------------------------------------
+   "Featured work" / #case-studies — scoped silver/graphite treatment
+   on the case-study cards ONLY. Section background, eyebrow, heading,
+   and intro copy are intentionally untouched.
+   Reuses the same silver palette family as #recommendations but with
+   slightly stronger card surfaces — these are the largest, most
+   important cards on the page and they need to hold their own.
+   --------------------------------------------------------------- */
+:root {
+  --cases-accent: #cfd6dd;
+  --cases-card-bg: linear-gradient(
+    180deg,
+    rgba(207, 214, 221, 0.085),
+    rgba(255, 255, 255, 0.025)
+  );
+  --cases-card-border: rgba(207, 214, 221, 0.2);
+  --cases-card-border-hover: rgba(207, 214, 221, 0.46);
+  --cases-card-shadow-hover: 0 22px 50px rgba(20, 28, 42, 0.46);
+}
+
+:root[data-theme='light'] {
+  --cases-accent: #6b7480;
+  --cases-card-bg: linear-gradient(
+    180deg,
+    rgba(107, 116, 128, 0.06),
+    rgba(255, 252, 248, 0.6)
+  );
+  --cases-card-border: rgba(107, 116, 128, 0.2);
+  --cases-card-border-hover: rgba(107, 116, 128, 0.38);
+  --cases-card-shadow-hover: 0 20px 44px rgba(50, 58, 70, 0.16);
+}
+
+#case-studies .case-card.card {
+  position: relative;
+  background: var(--cases-card-bg);
+  border-color: var(--cases-card-border);
+}
+
+#case-studies .case-card.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1.1rem;
+  right: 1.1rem;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--cases-accent) 22%,
+    var(--cases-accent) 78%,
+    transparent
+  );
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Override the existing .premium-case-card:hover so the silver
+   tint takes precedence over the neutral default. */
+#case-studies .case-card.premium-case-card:hover,
+#case-studies .case-card.premium-case-card:focus-within {
+  border-color: var(--cases-card-border-hover);
+  box-shadow: var(--cases-card-shadow-hover);
+}
+
+#case-studies .case-card.card:hover::before,
+#case-studies .case-card.card:focus-within::before {
+  opacity: 1;
+}
+
+/* ---------------------------------------------------------------
+   Metric cards — unified glassy treatment, hue-neutral.
+   Targets:
+     .hero-side-stat.card  (Home hero, "Focus")
+     .metric.card          (all 3 case studies, metrics-strip)
+   No color shift — reuses existing neutral tokens. Adds the
+   top hairline + hover lift pattern established elsewhere.
+   --------------------------------------------------------------- */
+:root {
+  --metric-hairline: rgba(255, 255, 255, 0.32);
+  --metric-hairline-strong: rgba(255, 255, 255, 0.55);
+  --metric-hover-shadow: 0 14px 36px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-theme='light'] {
+  --metric-hairline: rgba(60, 49, 49, 0.18);
+  --metric-hairline-strong: rgba(60, 49, 49, 0.32);
+  --metric-hover-shadow: 0 14px 32px rgba(37, 35, 35, 0.1);
+}
+
+/* Hero side stat — already has full card chrome, just add the
+   hairline + hover motion. Leave background/border/shadow alone. */
+.hero-side-stat.card {
+  position: relative;
+}
+
+.hero-side-stat.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1.1rem;
+  right: 1.1rem;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--metric-hairline) 22%,
+    var(--metric-hairline) 78%,
+    transparent
+  );
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 220ms ease, background 220ms ease;
+}
+
+.hero-side-stat.card:hover,
+.hero-side-stat.card:focus-within {
+  transform: translateX(2px);
+}
+
+.hero-side-stat.card:hover::before,
+.hero-side-stat.card:focus-within::before {
+  opacity: 1;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--metric-hairline-strong) 22%,
+    var(--metric-hairline-strong) 78%,
+    transparent
+  );
+}
+
+/* Metric strip cards — promote from flat pill to soft glass while
+   preserving the compact 12px radius and existing pill-gradient. */
+.metric.card {
+  position: relative;
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    background 220ms ease;
+}
+
+.metric.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  right: 1rem;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--metric-hairline) 22%,
+    var(--metric-hairline) 78%,
+    transparent
+  );
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 220ms ease, background 220ms ease;
+}
+
+.metric.card:hover,
+.metric.card:focus-within {
+  transform: translateX(2px);
+  border-color: var(--border);
+  box-shadow: var(--metric-hover-shadow);
+}
+
+.metric.card:hover::before,
+.metric.card:focus-within::before {
+  opacity: 1;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--metric-hairline-strong) 22%,
+    var(--metric-hairline-strong) 78%,
+    transparent
+  );
+}
+
+/* Case study footer cards — Previous/Next nav cards and the
+   contact CTA panel. Same hue-neutral glass treatment as metric
+   cards. Both already use full .card chrome, so we only add the
+   top hairline + hover motion. */
+.case-nav-card.card,
+.case-footer-cta.card {
+  position: relative;
+}
+
+.case-nav-card.card::before,
+.case-footer-cta.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1.1rem;
+  right: 1.1rem;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--metric-hairline) 22%,
+    var(--metric-hairline) 78%,
+    transparent
+  );
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 220ms ease, background 220ms ease;
+}
+
+/* Nav cards are interactive (Link), so they get the full hover lift. */
+.case-nav-card.card:hover,
+.case-nav-card.card:focus-within {
+  transform: translateX(2px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-lifted);
+}
+
+.case-nav-card.card:hover::before,
+.case-nav-card.card:focus-within::before {
+  opacity: 1;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--metric-hairline-strong) 22%,
+    var(--metric-hairline-strong) 78%,
+    transparent
+  );
+}
+
+/* CTA panel is not itself interactive (its buttons are), so the
+   hairline brightens on focus-within when a button inside is
+   focused, but no transform — the buttons own the motion. */
+.case-footer-cta.card:focus-within::before {
+  opacity: 1;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--metric-hairline-strong) 22%,
+    var(--metric-hairline-strong) 78%,
+    transparent
+  );
+}
+
