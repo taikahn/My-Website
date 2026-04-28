@@ -67,22 +67,22 @@
   --surface-hover: rgba(60, 49, 49, 0.07);
   --surface-muted: rgba(60, 49, 49, 0.052);
   --surface-muted-strong: rgba(60, 49, 49, 0.09);
-  --border: rgba(60, 49, 49, 0.12);
-  --border-strong: rgba(60, 49, 49, 0.2);
-  --border-soft: rgba(60, 49, 49, 0.09);
-  --border-faint: rgba(60, 49, 49, 0.06);
+  --border: rgba(60, 49, 49, 0.17);
+  --border-strong: rgba(60, 49, 49, 0.26);
+  --border-soft: rgba(60, 49, 49, 0.13);
+  --border-faint: rgba(60, 49, 49, 0.09);
   --text: #252323;
   --text-soft: #342f2f;
   --text-strong: #4e4545;
-  --muted: #6e6363;
-  --accent: #6b87a6;
-  --accent-strong: #4f6f90;
-  --accent-glow: rgba(107, 135, 166, 0.16);
-  --accent-shadow: rgba(79, 111, 144, 0.16);
-  --accent-shadow-strong: rgba(79, 111, 144, 0.22);
-  --cursor-glow: rgba(107, 135, 166, 0.34);
-  --accent-wash: rgba(107, 135, 166, 0.11);
-  --quote-mark: rgba(107, 135, 166, 0.16);
+  --muted: #5d5252;
+  --accent: #5a7696;
+  --accent-strong: #3f5c7a;
+  --accent-glow: rgba(90, 118, 150, 0.16);
+  --accent-shadow: rgba(63, 92, 122, 0.16);
+  --accent-shadow-strong: rgba(63, 92, 122, 0.22);
+  --cursor-glow: rgba(90, 118, 150, 0.34);
+  --accent-wash: rgba(90, 118, 150, 0.11);
+  --quote-mark: rgba(90, 118, 150, 0.16);
   --button-primary-text: #fbf7f1;
   --mini-logo-bg: #fffdf9;
   --overlay: rgba(37, 35, 35, 0.72);
@@ -96,22 +96,22 @@
   --nav-hover-border: rgba(60, 49, 49, 0.07);
   --menu-panel-bg: rgba(248, 244, 238, 0.97);
   --page-gradient:
-    radial-gradient(circle at top left, rgba(107, 135, 166, 0.12), transparent 28%),
+    radial-gradient(circle at top left, rgba(90, 118, 150, 0.12), transparent 28%),
     radial-gradient(circle at top right, rgba(218, 210, 188, 0.34), transparent 25%),
     linear-gradient(180deg, #fcf9f5 0%, #f4efe9 48%, #ede4d8 100%);
   --card-gradient: linear-gradient(180deg, rgba(255, 252, 248, 0.9), rgba(255, 249, 243, 0.68));
-  --section-gradient: linear-gradient(180deg, rgba(255, 252, 248, 0.38), rgba(255, 248, 241, 0.18));
-  --pill-gradient: linear-gradient(180deg, rgba(60, 49, 49, 0.06), rgba(60, 49, 49, 0.022));
+  --section-gradient: linear-gradient(180deg, rgba(255, 252, 248, 0.55), rgba(255, 248, 241, 0.3));
+  --pill-gradient: linear-gradient(180deg, rgba(60, 49, 49, 0.085), rgba(60, 49, 49, 0.04));
   --footer-gradient:
-    radial-gradient(circle at top right, rgba(107, 135, 166, 0.12), transparent 30%),
+    radial-gradient(circle at top right, rgba(90, 118, 150, 0.12), transparent 30%),
     linear-gradient(180deg, rgba(255, 252, 248, 0.68), rgba(255, 248, 241, 0.4));
-  --editorial-gradient: linear-gradient(180deg, rgba(107, 135, 166, 0.1), rgba(255, 251, 246, 0.42));
-  --shadow: 0 20px 60px rgba(37, 35, 35, 0.08);
-  --shadow-soft: 0 10px 30px rgba(37, 35, 35, 0.06);
-  --shadow-header: 0 10px 30px rgba(37, 35, 35, 0.06);
-  --shadow-lifted: 0 18px 48px rgba(37, 35, 35, 0.1);
-  --shadow-gallery: 0 22px 56px rgba(37, 35, 35, 0.12);
-  --shadow-menu: 0 24px 60px rgba(37, 35, 35, 0.12);
+  --editorial-gradient: linear-gradient(180deg, rgba(90, 118, 150, 0.1), rgba(255, 251, 246, 0.42));
+  --shadow: 0 20px 60px rgba(37, 35, 35, 0.11);
+  --shadow-soft: 0 10px 30px rgba(37, 35, 35, 0.09);
+  --shadow-header: 0 10px 30px rgba(37, 35, 35, 0.08);
+  --shadow-lifted: 0 18px 48px rgba(37, 35, 35, 0.14);
+  --shadow-gallery: 0 22px 56px rgba(37, 35, 35, 0.16);
+  --shadow-menu: 0 24px 60px rgba(37, 35, 35, 0.16);
   --status-error: #bd5a5a;
   color-scheme: light;
 }
