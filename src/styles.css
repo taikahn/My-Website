@@ -889,12 +889,13 @@ h3 {
 }
 
 .gallery-item {
-  grid-column: span 4;
+  grid-column: span 6;
   position: relative;
 }
 
-.gallery-item.portrait {
-  grid-column: span 3;
+.gallery-item.portrait,
+.gallery-item.square {
+  grid-column: span 4;
 }
 
 .gallery-item:hover,
@@ -912,6 +913,10 @@ h3 {
 
 .gallery-item.portrait img {
   aspect-ratio: 4 / 5;
+}
+
+.gallery-item.square img {
+  aspect-ratio: 1 / 1;
 }
 
 .gallery-button {
@@ -1394,7 +1399,8 @@ h3 {
   }
 
   .gallery-item,
-  .gallery-item.portrait {
+  .gallery-item.portrait,
+  .gallery-item.square {
     grid-column: span 6;
   }
 
@@ -1457,6 +1463,7 @@ h3 {
 
   .gallery-item,
   .gallery-item.portrait,
+  .gallery-item.square,
   .editorial-gallery .feature-wide {
     grid-column: span 1;
   }

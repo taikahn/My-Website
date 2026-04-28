@@ -6,33 +6,44 @@ import useHeroTyping from '../hooks/useHeroTyping';
 
 const HERO_TITLE = 'Design for complex software, systems, and modern web experiences.';
 
+// Gallery layout: 12-col grid. landscape=span 6 (16:10), portrait=span 4 (4:5),
+// square=span 4 (1:1). Order is arranged so each row packs cleanly:
+// 9 rows of 2 landscapes, 1 row of 3 portraits, 2 rows of 3 squares.
 const galleryImages = [
-  { src: '/assets/maverics-agent-entry.jpg', alt: 'Maverics agentic entry flow' },
-  { src: '/assets/agentic-interface-dark-light.jpg', alt: 'Agentic interface dark and light mode' },
-  { src: '/assets/agent-fabric-dark.jpg', alt: 'Agent fabric dark mode' },
-  { src: '/assets/maverics-data-visualization.jpg', alt: 'Maverics data visualization' },
-  { src: '/assets/maverics-ai-webscreen.jpg', alt: 'Maverics AI web screen' },
-  { src: '/assets/maverics-cards-ui.jpg', alt: 'Maverics cards UI' },
-  { src: '/assets/agent-fabric-dark-full.jpg', alt: 'Agent fabric dark mode full' },
-  { src: '/assets/total-energy-group.jpg', alt: 'Total Energy Group website' },
-  { src: '/assets/signet-capital-advisors.jpg', alt: 'Signet Capital Advisors website' },
-  { src: '/assets/design-elements-items.jpg', alt: 'Design elements items' },
-  { src: '/assets/complex-color-systems.jpg', alt: 'Complex color systems' },
-  { src: '/assets/color-system-variables.jpg', alt: 'Variable color system dark and light' },
-  { src: '/assets/artwork-three.jpg', alt: 'Artwork sample one', portrait: true },
-  { src: '/assets/artwork-one.jpg', alt: 'Artwork sample two', portrait: true },
-  { src: '/assets/design-elements-nav-icons.jpg', alt: 'Design elements navigation icons', portrait: true },
-  { src: '/assets/design-elements-icons.jpg', alt: 'Design elements icons', portrait: true },
-  { src: '/assets/design-exploration-one.png', alt: 'Design exploration one', portrait: true },
-  { src: '/assets/design-exploration-two.png', alt: 'Design exploration two', portrait: true },
-  { src: '/assets/design-elements-search-card.jpg', alt: 'Design elements search card', portrait: true },
-  { src: '/assets/monogram-badges.jpg', alt: 'Monogram badges', portrait: true },
-  { src: '/assets/unsplash-photography-views.jpg', alt: 'Unsplash photography views' },
-  { src: '/assets/colorado-snow-guitar.jpg', alt: 'Colorado snow guitar photography' },
-  { src: '/assets/landscape-photography.jpg', alt: 'Landscape photography' },
-  { src: '/assets/modals-dialogs.jpg', alt: 'Modals and dialogs', portrait: true },
-  { src: '/assets/search-range-filter.jpg', alt: 'Search range filter', portrait: true },
-  { src: '/assets/artwork-two.jpg', alt: 'Artwork sample three', portrait: true },
+  // Maverics product
+  { src: '/assets/maverics-agent-entry.jpg', alt: 'Maverics agentic entry flow', orientation: 'landscape' },
+  { src: '/assets/agentic-interface-dark-light.jpg', alt: 'Agentic interface dark and light mode', orientation: 'landscape' },
+  { src: '/assets/agent-fabric-dark.jpg', alt: 'Agent fabric dark mode', orientation: 'landscape' },
+  { src: '/assets/maverics-data-visualization.jpg', alt: 'Maverics data visualization', orientation: 'landscape' },
+  { src: '/assets/maverics-ai-webscreen.jpg', alt: 'Maverics AI web screen', orientation: 'landscape' },
+  { src: '/assets/maverics-cards-ui.jpg', alt: 'Maverics cards UI', orientation: 'landscape' },
+  { src: '/assets/agent-fabric-dark-full.jpg', alt: 'Agent fabric dark mode full', orientation: 'landscape' },
+  // Design systems
+  { src: '/assets/complex-color-systems.jpg', alt: 'Complex color systems', orientation: 'landscape' },
+  { src: '/assets/color-system-variables.jpg', alt: 'Variable color system dark and light', orientation: 'landscape' },
+  // UI elements
+  { src: '/assets/design-elements-items.jpg', alt: 'Design elements items', orientation: 'landscape' },
+  { src: '/assets/design-elements-nav-icons.jpg', alt: 'Design elements navigation icons', orientation: 'landscape' },
+  { src: '/assets/design-elements-icons.jpg', alt: 'Design elements icons', orientation: 'landscape' },
+  { src: '/assets/design-elements-search-card.jpg', alt: 'Design elements search card', orientation: 'landscape' },
+  { src: '/assets/monogram-badges.jpg', alt: 'Monogram badges', orientation: 'landscape' },
+  { src: '/assets/modals-dialogs.jpg', alt: 'Modals and dialogs', orientation: 'landscape' },
+  { src: '/assets/search-range-filter.jpg', alt: 'Search range filter', orientation: 'landscape' },
+  // Websites
+  { src: '/assets/total-energy-group.jpg', alt: 'Total Energy Group website', orientation: 'landscape' },
+  { src: '/assets/signet-capital-advisors.jpg', alt: 'Signet Capital Advisors website', orientation: 'landscape' },
+  // Portrait row
+  { src: '/assets/knife-edge-software.jpg', alt: 'Knife Edge Software flight simulator website', orientation: 'portrait' },
+  { src: '/assets/design-exploration-one.png', alt: 'Design exploration one', orientation: 'portrait' },
+  { src: '/assets/design-exploration-two.png', alt: 'Design exploration two', orientation: 'portrait' },
+  // Artwork (square)
+  { src: '/assets/artwork-one.jpg', alt: 'Artwork sample one', orientation: 'square' },
+  { src: '/assets/artwork-two.jpg', alt: 'Artwork sample two', orientation: 'square' },
+  { src: '/assets/artwork-three.jpg', alt: 'Artwork sample three', orientation: 'square' },
+  // Photography (true landscape, but cropped square in the grid; full image in lightbox)
+  { src: '/assets/unsplash-photography-views.jpg', alt: 'Unsplash photography views', orientation: 'square' },
+  { src: '/assets/landscape-photography.jpg', alt: 'Landscape photography', orientation: 'square' },
+  { src: '/assets/colorado-snow-guitar.jpg', alt: 'Colorado snow guitar photography', orientation: 'square' },
 ];
 
 export default function Home() {
@@ -287,7 +298,7 @@ export default function Home() {
             </div>
             <div className="gallery-grid lightbox-gallery">
               {galleryImages.map((img, i) => (
-                <figure key={i} className={`gallery-item card${img.portrait ? ' portrait' : ''}`}>
+                <figure key={i} className={`gallery-item card${img.orientation && img.orientation !== 'landscape' ? ` ${img.orientation}` : ''}`}>
                   <button className="gallery-button" type="button" onClick={() => openAt(i)}>
                     <img src={img.src} alt={img.alt} />
                   </button>
