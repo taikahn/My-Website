@@ -1,0 +1,16 @@
+[
+  {
+    "id": "cc_1779291231960",
+    "name": "test",
+    "command": "tes",
+    "cwd": "",
+    "shell": ""
+  },
+  {
+    "id": "cc_1779297229184",
+    "name": "another",
+    "command": "one time",
+    "cwd": "",
+    "shell": ""
+  }
+]
