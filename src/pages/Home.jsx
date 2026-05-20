@@ -322,6 +322,8 @@ export default function Home() {
                   'Windows',
                   'Linux',
                   'Claude',
+                  'Ollama',
+                  'Local LLMs',
                   'Figma',
                   'Adobe Creative Cloud',
                   'Affinity',
