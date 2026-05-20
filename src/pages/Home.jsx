@@ -64,17 +64,18 @@ export default function Home() {
               </h1>
               <p className="lede">
                 I help turn complicated products into clearer, more usable experiences through interface design,
-                systems thinking, responsive execution, and close alignment with how things actually get built.
+                systems thinking, responsive execution, and close alignment with how things actually get built, with
+                agent-driven design as an additional tool when it fits.
               </p>
               <div className="hero-actions">
                 <a className="button button-primary" href="#case-studies">View case studies</a>
                 <a className="button button-secondary" href="#about">About me</a>
               </div>
               <div className="hero-proof">
-                <span>Apple</span>
-                <span>Ping Identity</span>
-                <span>Strata Identity</span>
-                <span>Enterprise SaaS</span>
+                <span>Product Design</span>
+                <span>Software Design</span>
+                <span>Front-End</span>
+                <span>Responsive Web</span>
               </div>
             </div>
             <div className="hero-visual-stack">
@@ -259,24 +260,24 @@ export default function Home() {
             </div>
             <div className="three-up">
               <article className="info-card card">
+                <h3>Agentic Software Design</h3>
+                <p>
+                  I design and prototype AI-driven products and agent workflows, shaping how people interact with LLMs,
+                  tools, and automated systems through thoughtful UI, prompts, and orchestration.
+                </p>
+              </article>
+              <article className="info-card card">
                 <h3>Product Design</h3>
                 <p>
-                  I design interfaces and product flows with a strong focus on clarity, usability, hierarchy, navigation,
-                  and systems that can scale as products grow more complex.
+                  I design interfaces, product flows, and software experiences with a focus on clarity, usability,
+                  hierarchy, navigation, and systems that scale as products grow more complex.
                 </p>
               </article>
               <article className="info-card card">
                 <h3>Web Design</h3>
                 <p>
-                  I build and design websites across platforms including WordPress, Elementor, Shopify, Squarespace,
-                  HTML/CSS, and modern front-end workflows, balancing communication, speed, quality, and practicality.
-                </p>
-              </article>
-              <article className="info-card card">
-                <h3>Photography</h3>
-                <p>
-                  I use product and landscape photography as part of the overall design toolkit, helping bring visual
-                  originality and stronger storytelling into digital experiences.
+                  I build and design websites across platforms like WordPress, Shopify, Framer, and Figma Make, as
+                  well as fully coded pages using HTML, CSS, JS, and modern front-end workflows.
                 </p>
               </article>
             </div>
