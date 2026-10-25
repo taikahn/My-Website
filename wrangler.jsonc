@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "my-website",
+  // Set this to a recent date (Cloudflare recommends the current day).
+  "compatibility_date": "2026-10-25",
+  "assets": {
+    "not_found_handling": "single-page-application"
+  }
+}

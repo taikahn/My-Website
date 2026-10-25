@@ -597,6 +597,14 @@ h3 {
   font-size: 0.92rem;
 }
 
+.notfound-inner {
+  max-width: 44rem;
+}
+
+.notfound-title {
+  max-width: 14ch;
+}
+
 .card {
   background: var(--card-gradient);
   border: 1px solid var(--border);

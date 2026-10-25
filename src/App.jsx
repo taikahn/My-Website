@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import CaseStudyMaverics from './pages/CaseStudyMaverics';
 import CaseStudyDesignSystems from './pages/CaseStudyDesignSystems';
 import CaseStudyAiUi from './pages/CaseStudyAiUi';
+import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 
 const THEME_STORAGE_KEY = 'theme-preference';
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/case-study-maverics" element={<CaseStudyMaverics />} />
         <Route path="/case-study-design-systems" element={<CaseStudyDesignSystems />} />
         <Route path="/case-study-ai-ui" element={<CaseStudyAiUi />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
