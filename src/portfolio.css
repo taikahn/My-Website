@@ -426,7 +426,11 @@ img { height: auto; }
 .pear-hero-menubar svg, .pear-hero-bar svg { height: 3.4cqw; fill: currentColor; flex: none; }
 .pear-hero-menubar b, .pear-hero-bar b { font-weight: 650; }
 .pear-hero-menubar em { margin-left: auto; font-style: normal; }
-.pear-hero-window { position: absolute; top: 17cqw; width: 42cqw; height: 34cqw; overflow: hidden; border-radius: 1.6cqw; background: #222320; box-shadow: 0 0 0 1px #ffffff18, 0 3cqw 6cqw -2cqw #000000b3; cursor: grab; touch-action: none; user-select: none; transition: left 120ms ease-out; }
+/* Hide Real App Menus: a black band over the real menus, rounded at its end, with the app's concave “ear” where it meets the bar */
+.pear-hero-covered { position: relative; align-self: stretch; flex: 1; display: flex; align-items: center; gap: 3cqw; }
+.pear-hero-covered::after { content: ''; position: absolute; inset: 0 -.6cqw 0 -3cqw; background: #0b0b0a; border-bottom-right-radius: 1.6cqw; }
+.pear-hero-covered::before { content: ''; position: absolute; top: 0; left: calc(100% + .6cqw); width: 1.6cqw; height: 1.6cqw; background: radial-gradient(circle at 100% 100%, transparent 1.55cqw, #0b0b0a 1.6cqw); }
+.pear-hero-window { position: absolute; top: 13cqw; width: 42cqw; height: 34cqw; overflow: hidden; border-radius: 1.6cqw; background: #222320; box-shadow: 0 0 0 1px #ffffff18, 0 3cqw 6cqw -2cqw #000000b3; cursor: grab; touch-action: none; user-select: none; transition: left 120ms ease-out; }
 .pear-hero-window:active { cursor: grabbing; transition: none; }
 .pear-hero-titlebar { height: 5.4cqw; display: flex; align-items: center; gap: 1.1cqw; padding: 0 2cqw; background: #2d2e2a; border-bottom: 1px solid #00000030; color: #ecece399; font: 600 2.1cqw/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 .pear-hero-titlebar i { width: 1.5cqw; height: 1.5cqw; border-radius: 50%; background: #ff5f57; flex: none; }
@@ -440,9 +444,32 @@ img { height: auto; }
 .pear-hero-window-body i:nth-child(3) { width: 72%; }
 .pear-hero-window-body i:nth-child(4) { width: 80%; }
 .pear-hero-window-body i:nth-child(5) { width: 58%; }
-.pear-hero-bar { position: absolute; top: 0; z-index: 3; width: 42cqw; height: 7.2cqw; display: flex; align-items: center; gap: 2.4cqw; padding: 0 2.6cqw; overflow: hidden; border-radius: 0 0 1.4cqw 1.4cqw; background: #0b0b0a; color: #ecece3; box-shadow: 0 .6cqw 1.6cqw #00000059; font: 450 2.3cqw/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; white-space: nowrap; pointer-events: none; transition: left 120ms ease-out; }
+.pear-hero-bar { position: absolute; top: 0; z-index: 3; width: 42cqw; height: 7.2cqw; display: flex; align-items: center; gap: 2.4cqw; padding: 0 2.6cqw; overflow: hidden; border-radius: 0 0 1.4cqw 1.4cqw; background: #0b0b0a; color: #ecece3; font: 450 2.3cqw/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; white-space: nowrap; pointer-events: none; transition: left 120ms ease-out; }
 .pear-hero-bar svg { color: var(--accent); }
-.pear-hero-cursor { position: absolute; top: 19.6cqw; left: 54cqw; width: 2.8cqw; fill: #fff; stroke: #111; stroke-width: 1.2; stroke-linejoin: round; filter: drop-shadow(0 .3cqw .4cqw #00000080); pointer-events: none; }
+.pear-hero-cursor { position: absolute; top: 15.6cqw; left: 54cqw; width: 2.8cqw; fill: #fff; stroke: #111; stroke-width: 1.2; stroke-linejoin: round; filter: drop-shadow(0 .3cqw .4cqw #00000080); pointer-events: none; transition: opacity 200ms ease; }
+/* Same drag as pearbar.app, played once on screen as two passes: window, its bar (a beat behind), and the cursor. A pointer coming in stops it. */
+/* Pass 1 goes well left, pass 2 a shorter way right; each slide is ~1.2s */
+@keyframes pear-drag { 0%, 7% { transform: translateX(0); } 22%, 29% { transform: translateX(-20cqw); } 44%, 57% { transform: translateX(0); } 72%, 79% { transform: translateX(8cqw); } 94%, 100% { transform: translateX(0); } }
+.pear-hero-scene.is-started.is-auto .pear-hero-window, .pear-hero-scene.is-started.is-auto .pear-hero-bar, .pear-hero-scene.is-started .pear-hero-cursor { animation: pear-drag 8s ease-in-out 1; }
+.pear-hero-scene.is-started.is-auto .pear-hero-bar { animation-delay: .09s; }
+.pear-hero-scene:not(.is-auto) .pear-hero-cursor { animation-play-state: paused; opacity: 0; }
+.pear-hero-scene.is-handoff .pear-hero-window, .pear-hero-scene.is-handoff .pear-hero-bar, .pear-hero-scene.is-dragging .pear-hero-window, .pear-hero-scene.is-dragging .pear-hero-bar { transition: none; }
+/* Light mode: pearbar.app's light desk. The band and the Pearbar bar turn light, as in the app, with a hairline edge instead of a shadow. */
+:root[data-theme='light'] .pear-hero-scene { background: radial-gradient(120% 90% at 28% 18%, #eef4dc, #cfddae 58%, #afc387); }
+:root[data-theme='light'] .pear-hero-menubar { color: #14160f80; background: #ffffff99; }
+:root[data-theme='light'] .pear-hero-window { background: #fbfbf8; box-shadow: 0 0 0 1px #0000001a, 0 3cqw 6cqw -2cqw #283c0059; }
+:root[data-theme='light'] .pear-hero-titlebar { background: #ededE8; color: #14141299; }
+:root[data-theme='light'] .pear-hero-window-body i { background: #00000014; }
+:root[data-theme='light'] .pear-hero-window-body i:first-child { background: #00000029; }
+:root[data-theme='light'] .pear-hero-covered { filter: drop-shadow(1px 1px 0 #00000024); }
+:root[data-theme='light'] .pear-hero-covered::after { background: #f7f7f7; }
+:root[data-theme='light'] .pear-hero-covered::before { background: radial-gradient(circle at 100% 100%, transparent 1.55cqw, #f7f7f7 1.6cqw); }
+:root[data-theme='light'] .pear-hero-bar { background: #f7f7f7; color: #111; box-shadow: 0 1px 0 #00000024; }
+:root[data-theme='light'] .pear-hero-bar svg { color: #5e7d17; }
+@media (prefers-reduced-motion: reduce) {
+  .pear-hero-scene.is-started.is-auto .pear-hero-window, .pear-hero-scene.is-started.is-auto .pear-hero-bar { animation: none; }
+  .pear-hero-cursor { display: none; }
+}
 .pearbar-reference figcaption { text-align: center; }
 
 /* One shorter study, set as a quiet row below the main projects. */
