@@ -3,7 +3,6 @@ import Footer from '../components/Footer';
 import PearbarStudy from '../components/PearbarStudy';
 
 const visualWork = [
-  { src: 'artwork-one.jpg', title: 'Graphic explorations', note: 'Color, form, and composition' },
   { src: 'landscape-photography.jpg', title: 'Outside the screen', note: 'Landscape photography' },
   { src: 'colorado-snow-guitar.jpg', title: 'A different kind of practice', note: 'Music and photography' },
 ];
@@ -64,9 +63,9 @@ export default function Home() {
         </section>
 
         <section id="gallery" className="visual-section page-width" aria-labelledby="visual-title">
-          <div className="section-rule"><h2 id="visual-title">Another side of the work</h2></div>
+          <div className="section-rule"><h2 id="visual-title">Another side of my work</h2></div>
           <div className="visual-grid">{visualWork.map((item) => <figure key={item.src}><a href={`/assets/${item.src}`} target="_blank" rel="noreferrer" aria-label={`View ${item.title.toLowerCase()} full size in a new tab`}><img src={`/assets/${item.src}`} alt={item.title} loading="lazy" /></a><figcaption><strong>{item.title}</strong><span>{item.note}</span></figcaption></figure>)}</div>
-          <div className="music-heading"><h3>Music has a place on the web, too.</h3></div><div className="music-work">{musicWork.map((item) => <article className="music-card" key={item.title}><a href={item.href} target="_blank" rel="noreferrer">{item.image ? <img src={item.image} alt={`${item.title} website preview`} loading="lazy" /> : <iframe src={item.preview} title={`${item.title} website preview`} loading="lazy" />}<div><h3>{item.title} <span aria-hidden="true">↗</span></h3><p>{item.note}</p></div></a></article>)}</div>
+          <div className="music-work">{musicWork.map((item) => <article className={`music-card music-card-${item.title.toLowerCase()}`} key={item.title}><a href={item.href} target="_blank" rel="noreferrer">{item.image ? <img src={item.image} alt={`${item.title} website preview`} loading="lazy" /> : <iframe src={item.preview} title={`${item.title} website preview`} loading="lazy" />}<div><h3>{item.title} <span aria-hidden="true">↗</span></h3><p>{item.note}</p></div></a></article>)}</div>
         </section>
       </main>
       <Footer />
