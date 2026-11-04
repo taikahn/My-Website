@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import PearbarStudy from '../components/PearbarStudy';
+import WorkGrid from '../components/WorkGrid';
 
 // A short, deliberate tool list for scanning; the case studies carry the skills.
 const toolkit = [
@@ -25,7 +26,7 @@ export default function Home() {
         <section className="intro-section page-width" aria-labelledby="intro-title">
           <h1 id="intro-title">I design digital products.<br /><em>And help build them.</em></h1>
           <div className="intro-bottom">
-            <p className="intro-role">Tai Kahn<br /><span>Product and interface<br />designer</span></p>
+            <p className="intro-role">Tai Kahn<br /><span>Product and interface{' '}<br />designer</span></p>
             <div className="intro-statement">
               <p>I work from interface and interaction through code, testing, and release, with AI tools in the mix.</p>
               <a className="editorial-link" href="#work">Explore the work <span aria-hidden="true">↓</span></a>
@@ -74,6 +75,11 @@ export default function Home() {
             const content = <><img src={item.src} width={item.width} height={item.height} alt={item.alt} loading="lazy" /><div className="side-card-caption"><h3>{item.title}{item.href && <span aria-hidden="true"> ↗</span>}</h3><p>{item.note}</p></div></>;
             return <article className="side-card" key={item.title}>{item.href ? <a href={item.href} target="_blank" rel="noreferrer">{content}</a> : content}</article>;
           })}</div>
+        </section>
+
+        <section id="all-work" className="visual-section page-width" aria-labelledby="all-work-title">
+          <div className="section-rule"><h2 id="all-work-title">All the work</h2><span>Open any tile for a closer look</span></div>
+          <WorkGrid />
         </section>
       </main>
       <Footer />
