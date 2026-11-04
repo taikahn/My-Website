@@ -10,7 +10,7 @@ export default function Header({ theme, onToggleTheme }) {
         <nav className="portfolio-nav" aria-label="Main navigation">
           <Link to="/#work">Work</Link>
           <Link to="/#about">About</Link>
-          <Link to="/#contact">Contact <span aria-hidden="true">↗</span></Link>
+          <Link to="/#contact">Contact</Link>
           <ThemeToggle theme={theme} onToggle={onToggleTheme} />
         </nav>
       </div>

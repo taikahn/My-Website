@@ -2,14 +2,12 @@ import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import PearbarStudy from '../components/PearbarStudy';
 
-const visualWork = [
-  { src: 'landscape-photography.jpg', title: 'Outside the screen', note: 'Landscape photography' },
-  { src: 'colorado-snow-guitar.jpg', title: 'A different kind of practice', note: 'Music and photography' },
-];
-
-const musicWork = [
-  { title: 'FistMeetsGlass', note: 'Music, images, and noise', href: 'https://fistmeetsglass.com', preview: 'https://fistmeetsglass.com' },
-  { title: 'TAIROM', note: 'Dark electronic music and a DIY site', href: 'https://tairom.com', image: '/assets/tairom-preview.png' },
+// Music first (made things that link out), then photographs (shown, not linked).
+const sideWork = [
+  { title: 'FistMeetsGlass', note: 'Music, images, and noise', href: 'https://fistmeetsglass.com', src: '/assets/fistmeetsglass-preview.jpg', width: 1800, height: 1118, alt: 'FistMeetsGlass website: the name in bold white blocks beside a video player, over a cracked-glass texture' },
+  { title: 'TAIROM', note: 'Dark electronic music and a DIY site', href: 'https://tairom.com', src: '/assets/tairom-preview.jpg', width: 1800, height: 1118, alt: 'TAIROM website: a glowing green sigil above the TA^ROM wordmark on black' },
+  { title: 'Civic Center Park, Denver', note: 'Photograph', src: '/assets/denver-civic-center-park.jpg', width: 1400, height: 1050, alt: 'A bed of yellow and purple tulips in Civic Center Park, Denver, with the colonnade and downtown towers behind' },
+  { title: 'Summit County, Colorado', note: 'Photograph', src: '/assets/colorado-snow-guitar.jpg', width: 1600, height: 1000, alt: 'A lone figure carrying a guitar across a frozen lake in Summit County, Colorado, under heavy storm clouds' },
 ];
 
 export default function Home() {
@@ -21,7 +19,7 @@ export default function Home() {
           <div className="intro-bottom">
             <p className="intro-role">Tai Kahn<br /><span>Product and interface<br />designer</span></p>
             <div className="intro-statement">
-              <p>I design product interfaces and work across code, testing, and release, with AI tools in the mix.</p>
+              <p>I work from interface and interaction through code, testing, and release, with AI tools in the mix.</p>
               <a className="editorial-link" href="#work">Explore the work <span aria-hidden="true">↓</span></a>
             </div>
           </div>
@@ -32,24 +30,24 @@ export default function Home() {
           <div className="section-rule"><h2 id="work-title">Selected work</h2></div>
 
           <article className="featured-project">
-            <div className="project-heading"><div><h3><Link to="/work/zide">Zide <span aria-hidden="true">↗</span></Link></h3></div><p>A development workspace.<br />Designed down to the details.</p></div>
-            <Link className="zide-stage project-image-link" to="/work/zide" aria-label="Explore my work on Zide">
+            <div className="project-heading"><div><h3>Zide<span className="project-dot">.</span></h3></div><p>A development workspace.<br />Designed down to the details.</p></div>
+            <Link className="zide-stage project-image-link" to="/work/zide" aria-label="Read the Zide case study">
               <div className="stage-label"><span>Zide / Native desktop software</span><span>Interface · Interaction · Implementation</span></div>
               <img src="/assets/zide-workspace.webp" width="1440" height="901" alt="Zide’s published workspace overview, with Git staging and an Assist conversation side by side" fetchPriority="high" />
             </Link>
-            <div className="project-summary"><p>Shaping how a complex workspace feels and behaves: staging interactions, theme hierarchy, everyday navigation, and the website that introduces the product.</p><Link className="editorial-link" to="/work/zide">Inside the work <span aria-hidden="true">↗</span></Link></div>
+            <div className="project-summary"><p>Shaping how a complex workspace feels and behaves: staging interactions, theme hierarchy, everyday navigation, and the website that introduces the product.</p><Link className="editorial-link" to="/work/zide">Read the case study <span aria-hidden="true">→</span></Link></div>
           </article>
 
           <article className="pearbar-project">
-            <div className="pearbar-copy"><h3>Pearbar<span className="project-dot">.</span></h3><p className="project-deck">A shorter trip<br />to the menu.</p><p>A Mac utility built around a small, persistent friction: the distance between the window you’re working in and its menus. Product idea, native behavior, visual identity, and a website that lets you try the idea.</p><Link className="editorial-link" to="/work/pearbar">From idea to application <span aria-hidden="true">↗</span></Link></div>
+            <div className="pearbar-copy"><h3>Pearbar<span className="project-dot">.</span></h3><p className="project-deck">A shorter trip<br />to the menu.</p><p>A Mac utility built around a small, persistent friction: the distance between the window you’re working in and its menus. Product idea, native behavior, visual identity, and a website that lets you try the idea.</p><Link className="editorial-link" to="/work/pearbar">Read the case study <span aria-hidden="true">→</span></Link></div>
             <PearbarStudy />
           </article>
 
           <div className="supporting-projects">
-            <article className="supporting-project"><figure><Link className="audioglass-stage project-image-link" to="/work/audioglass" aria-label="Explore AudioGlass"><img src="/assets/audioglass-workspace.webp" width="1446" height="1206" loading="lazy" alt="AudioGlass comparing cyan and amber audio waveforms, with timestamped example mix notes" /></Link><figcaption className="screenshot-caption">Actual interface · note text edited for illustration.</figcaption></figure><div className="supporting-project-copy"><h3>AudioGlass</h3><p>Compare takes, listen in sync, and leave notes at exact moments. A software project rooted in my own music practice.</p><Link className="editorial-link" to="/work/audioglass">The idea behind the tool <span aria-hidden="true">↗</span></Link></div></article>
-            <article className="supporting-project"><Link className="maverics-stage project-image-link" to="/case-study-maverics" aria-label="Read the Maverics product design case study"><img src="/assets/agentic-interface-dark-light.jpg" width="1600" height="1000" loading="lazy" alt="Maverics interface designs in dark and light mode" /></Link><div className="supporting-project-copy"><h3>Maverics</h3><p>Five years designing interfaces and systems for Strata Identity, from early flows and wireframes to the product customers used.</p><Link className="editorial-link" to="/case-study-maverics">Explore the case study <span aria-hidden="true">↗</span></Link></div></article>
+            <article className="supporting-project"><Link className="supporting-project-media maverics-stage project-image-link" to="/work/maverics" aria-label="Read the Maverics case study"><img src="/assets/agentic-interface-dark-light.jpg" width="1600" height="1000" loading="lazy" alt="Maverics agent fabric overview in dark and light themes" /></Link><div className="supporting-project-copy"><h3>Maverics<span className="project-dot">.</span></h3><p>Five years designing interfaces and design systems for Strata Identity, from early flows and wireframes to the product enterprise customers used.</p><Link className="editorial-link" to="/work/maverics">Read the case study <span aria-hidden="true">→</span></Link></div></article>
+            <article className="supporting-project"><Link className="supporting-project-media audioglass-stage project-image-link" to="/work/audioglass" aria-label="Read the AudioGlass case study"><img src="/assets/audioglass-workspace.webp" width="1446" height="1206" loading="lazy" alt="AudioGlass comparing cyan and amber audio waveforms, with timestamped mix notes" /></Link><div className="supporting-project-copy"><h3>AudioGlass<span className="project-dot">.</span></h3><p>Compare takes, listen in sync, and leave notes at exact moments. A software project rooted in my own music practice.</p><Link className="editorial-link" to="/work/audioglass">Read the case study <span aria-hidden="true">→</span></Link></div></article>
           </div>
-          <section className="more-work" aria-label="More case studies"><div className="more-work-grid"><article><h4>Keeping the system close to the product</h4><p>Variables, states, and documentation that helped design and engineering work from the same source.</p><Link className="editorial-link" to="/case-study-design-systems">Read the case study <span aria-hidden="true">↗</span></Link></article><article><h4>Designing in the browser with AI</h4><p>A working experiment in using code to test responsive behavior and interaction earlier.</p><Link className="editorial-link" to="/case-study-ai-ui">Read the case study <span aria-hidden="true">↗</span></Link></article></div></section>
+          <article className="more-work"><h3>Designing in the browser<span className="project-dot">.</span></h3><div><p>An early experiment in using AI tools and code to test responsive behavior and interaction sooner.</p><Link className="editorial-link" to="/work/ai-ui">Read the case study <span aria-hidden="true">→</span></Link></div></article>
         </section>
 
         <section id="practice" className="practice-section" aria-labelledby="practice-title">
@@ -63,9 +61,11 @@ export default function Home() {
         </section>
 
         <section id="gallery" className="visual-section page-width" aria-labelledby="visual-title">
-          <div className="section-rule"><h2 id="visual-title">Another side of my work</h2></div>
-          <div className="visual-grid">{visualWork.map((item) => <figure key={item.src}><a href={`/assets/${item.src}`} target="_blank" rel="noreferrer" aria-label={`View ${item.title.toLowerCase()} full size in a new tab`}><img src={`/assets/${item.src}`} alt={item.title} loading="lazy" /></a><figcaption><strong>{item.title}</strong><span>{item.note}</span></figcaption></figure>)}</div>
-          <div className="music-work">{musicWork.map((item) => <article className={`music-card music-card-${item.title.toLowerCase()}`} key={item.title}><a href={item.href} target="_blank" rel="noreferrer">{item.image ? <img src={item.image} alt={`${item.title} website preview`} loading="lazy" /> : <iframe src={item.preview} title={`${item.title} website preview`} loading="lazy" />}<div><h3>{item.title} <span aria-hidden="true">↗</span></h3><p>{item.note}</p></div></a></article>)}</div>
+          <div className="section-rule"><h2 id="visual-title">Music and photography</h2></div>
+          <div className="side-work">{sideWork.map((item) => {
+            const content = <><img src={item.src} width={item.width} height={item.height} alt={item.alt} loading="lazy" /><div className="side-card-caption"><h3>{item.title}{item.href && <span aria-hidden="true"> ↗</span>}</h3><p>{item.note}</p></div></>;
+            return <article className="side-card" key={item.title}>{item.href ? <a href={item.href} target="_blank" rel="noreferrer">{content}</a> : content}</article>;
+          })}</div>
         </section>
       </main>
       <Footer />
