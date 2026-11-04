@@ -62,7 +62,6 @@ export default function ProjectStory() {
       <main id="main-content" className="project-story page-width">
         <Link className="back-link" to="/#work">← Selected work</Link>
         <header className="story-header">
-          <p className="index-label">{project.category} / {project.name}</p>
           <h1>{project.title}</h1>
           <p className="story-introduction">{project.introduction}</p>
           <dl className="story-facts"><div><dt>My focus</dt><dd>{project.scope}</dd></div><div><dt>Context</dt><dd>{project.context}</dd></div>{project.link && <div><dt>On the web</dt><dd><a className="editorial-link" href={project.link} target="_blank" rel="noreferrer">{project.linkLabel} ↗</a></dd></div>}</dl>
@@ -71,8 +70,7 @@ export default function ProjectStory() {
         {slug === 'pearbar' && <PearbarStudy />}
         {slug === 'audioglass' && <figure className="story-image"><a href="/assets/audioglass-workspace.webp" target="_blank" rel="noreferrer" aria-label="View AudioGlass screenshot full size in a new tab"><img src="/assets/audioglass-workspace.webp" width="1446" height="1206" alt="AudioGlass with two audio versions on a shared timeline and timestamped mix-feedback examples in the Notes panel" /></a><figcaption>Actual AudioGlass interface. Note text has been edited to illustrate mix feedback; these are not real collaborator comments. Open the image to view it full size.</figcaption></figure>}
         <div className="story-chapters">{project.chapters.map((chapter) => <section className="story-chapter" key={chapter.title}><h2>{chapter.title}</h2><div><p>{chapter.text}</p><p className="chapter-detail">{chapter.detail}</p></div></section>)}</div>
-        <aside className="story-attribution"><p className="index-label">Scope &amp; authorship</p><p>{project.closing}</p></aside>
-        <nav className="next-project" aria-label="More work"><span className="index-label">Next project</span><Link to={`/work/${project.next}`}>{project.nextName} <span aria-hidden="true">↗</span></Link></nav>
+        <nav className="next-project" aria-label="More work"><Link to={`/work/${project.next}`}>{project.nextName} <span aria-hidden="true">↗</span></Link></nav>
       </main>
       <Footer />
     </>
