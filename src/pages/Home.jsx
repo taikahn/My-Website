@@ -2,6 +2,14 @@ import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import PearbarStudy from '../components/PearbarStudy';
 
+// A short, deliberate tool list for scanning; the case studies carry the skills.
+const toolkit = [
+  ['Design', ['Figma', 'Variables', 'Prototyping', 'Photoshop', 'Illustrator', 'Affinity']],
+  ['Build', ['React', 'Astro', 'Vite', 'Rust', 'Tauri', 'Git', 'GitHub']],
+  ['AI', ['Claude', 'Codex', 'Gemini', 'DeepSeek', 'MCP', 'Local models']],
+  ['Studio', ['Logic Pro', 'Final Cut Pro', 'Teenage Engineering', 'Korg']],
+];
+
 // Music first (made things that link out), then photographs (shown, not linked).
 const sideWork = [
   { title: 'FistMeetsGlass', note: 'Music, images, and noise', href: 'https://fistmeetsglass.com', src: '/assets/fistmeetsglass-preview.jpg', width: 1800, height: 1118, alt: 'FistMeetsGlass website: the name in bold white blocks beside a video player, over a cracked-glass texture' },
@@ -56,7 +64,7 @@ export default function Home() {
 
         <section id="about" className="about-editorial page-width" aria-labelledby="about-title">
           <div className="section-rule"><h2 id="about-title">A little background</h2></div>
-          <div className="background-grid"><div><p className="background-heading">From pixels<br />to products.<br /><em>Still curious.</em></p><p className="background-personal">Away from the screen: mountains, bicycles, skateboards, music, and FPV drones.</p></div><div className="background-copy"><p>My career began at Apple, helping implement designs in products including iTunes and Mac OS X. At Ping Identity, I designed interfaces and contributed front-end code for PingFederate.</p><p>At Strata Identity, I spent five years shaping Maverics: product flows, interface patterns, prototypes, and the design systems underneath them.</p><p>Today, that experience informs my work on Zide and my own software projects. I’m interested in the whole path from noticing a problem to putting something useful in someone’s hands.</p><div className="career-line"><span>Apple</span><span>Ping Identity</span><span>Strata Identity</span><span>Zide</span></div></div></div>
+          <div className="background-grid"><div><p className="background-heading">From pixels<br />to products.<br /><em>Still curious.</em></p><p className="background-personal">Away from the screen: mountains, bicycles, skateboards, music, and FPV drones.</p></div><div className="background-copy"><p>My career began at Apple, helping implement designs in products including iTunes and Mac OS X. At Ping Identity, I designed interfaces and contributed front-end code for PingFederate.</p><p>At Strata Identity, I spent five years shaping Maverics: product flows, interface patterns, prototypes, and the design systems underneath them.</p><p>Today, that experience informs my work on Zide and my own software projects. I’m interested in the whole path from noticing a problem to putting something useful in someone’s hands.</p><div className="career-line"><span>Apple</span><span>Ping Identity</span><span>Strata Identity</span><span>Zide</span></div><dl className="toolkit" aria-label="Tools">{toolkit.map(([group, tools]) => <div key={group}><dt>{group}</dt><dd>{tools.join(' · ')}</dd></div>)}</dl></div></div>
           <blockquote className="collaborator-quote"><p>“He thinks like both a designer and a builder.”</p><cite>Michel Khalil, Principal and Creative Director at theDESIGNsnobs</cite></blockquote>
         </section>
 
