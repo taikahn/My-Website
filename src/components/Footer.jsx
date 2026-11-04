@@ -12,7 +12,7 @@ export default function Footer() {
           </div>
           <ContactForm />
         </div>
-        <div className="footer-colophon"><span>© {new Date().getFullYear()} Tai Kahn</span><a href="#main-content">Back to top ↑</a></div>
+        <div className="footer-colophon"><span>Tai Kahn 2027</span><a href="#main-content">Back to top ↑</a></div>
       </div>
     </footer>
   );
