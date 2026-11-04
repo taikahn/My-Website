@@ -18,14 +18,14 @@ export default function CaseStudyDesignSystems() {
 
   return (
     <>
-    <main>
+    <main id="main-content">
       <section className="hero case-hero">
         <div className="container case-hero-layout">
           <div className="hero-copy">
             <p className="eyebrow">Case Study</p>
             <h1>Complex Design Systems</h1>
             <p className="lede">
-              Building design systems that serve both product design and engineering requires more than a UI library.
+              Building a useful design system takes more than a component library. It needs clear names, real states, theme rules, and documentation people can use.
               It requires structure, naming discipline, states, theming logic, and practical documentation.
             </p>
             <div className="hero-actions">
@@ -64,7 +64,7 @@ export default function CaseStudyDesignSystems() {
           <div className="story-content">
             <div className="section-heading left">
               <p className="eyebrow">Overview</p>
-              <h2>Creating systems that reduce friction</h2>
+              <h2>Making a system people could use</h2>
             </div>
             <p>
               At Strata Identity I created multiple Figma-based design systems that helped organize the product UI into
@@ -87,7 +87,7 @@ export default function CaseStudyDesignSystems() {
 
             <div className="section-heading left top-gap">
               <p className="eyebrow">Problem</p>
-              <h2>Bridging the gap between design libraries and shipped UI</h2>
+              <h2>Keeping the library close to the shipped UI</h2>
             </div>
             <p>
               Many systems fail because they become either too abstract for developers or too incomplete for designers.
@@ -97,7 +97,7 @@ export default function CaseStudyDesignSystems() {
 
             <div className="section-heading left top-gap">
               <p className="eyebrow">System principles</p>
-              <h2>Useful, documented, and close to implementation</h2>
+              <h2>Useful foundations, documented clearly</h2>
             </div>
             <div className="detail-grid">
               <article className="detail-card card">
@@ -116,7 +116,7 @@ export default function CaseStudyDesignSystems() {
 
             <div className="section-heading left top-gap">
               <p className="eyebrow">What the system included</p>
-              <h2>Structures that made the work reusable</h2>
+              <h2>The parts people actually reused</h2>
             </div>
             <div className="check-grid">
               <div className="check-item card"><strong>Variables and modes</strong><p>Theme-aware foundations that supported fast transitions between dark and light interfaces.</p></div>
@@ -150,7 +150,7 @@ export default function CaseStudyDesignSystems() {
         <div className="container narrow-copy case-ending">
           <div className="section-heading left">
             <p className="eyebrow">Outcome</p>
-            <h2>A design system that worked for both design and code</h2>
+            <h2>A system that supported daily product work</h2>
           </div>
           <p>
             The most valuable systems are the ones people actually use. This work aimed to make the system practical,
@@ -163,7 +163,7 @@ export default function CaseStudyDesignSystems() {
           </p>
           <p>
             By pairing visual consistency with implementation awareness, the system became more than a style guide. It
-            became a shared product language.
+            became a shared reference for the product.
           </p>
         </div>
       </section>

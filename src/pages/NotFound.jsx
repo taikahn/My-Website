@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function NotFound() {
   return (
-    <main id="top">
+    <main id="main-content">
       <section className="hero premium-hero notfound-hero">
         <div className="container">
           <div className="notfound-inner">

@@ -1,4 +1,4 @@
-# Tai Kahn — Portfolio
+# Tai Kahn | Portfolio
 
 Personal portfolio site built with **React** + **Vite**, deployed on **Cloudflare Workers**.
 

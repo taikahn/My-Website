@@ -15,7 +15,7 @@ export default function CaseStudyMaverics() {
 
   return (
     <>
-    <main>
+    <main id="main-content">
       <section className="hero case-hero">
         <div className="container case-hero-layout">
           <div className="hero-copy">
@@ -52,7 +52,7 @@ export default function CaseStudyMaverics() {
             <div className="summary-inner">
               <img className="mini-logo" src="/assets/maverics-logo.svg" alt="Maverics logo" />
               <div><p className="summary-label">Role</p><p>Product Design, UX/UI, system thinking, interface evolution</p></div>
-              <div><p className="summary-label">Focus</p><p>Enterprise SaaS, navigation, workflows, dashboards, production-ready design</p></div>
+              <div><p className="summary-label">Focus</p><p>Enterprise SaaS, navigation, workflows, dashboards, and shippable UI</p></div>
               <div><p className="summary-label">Responsibilities</p><p>Page layouts, hierarchy, flows, component behavior, consistency, and product maturity</p></div>
               <div><p className="summary-label">Impact</p><p>Supported a platform used by enterprise customers and helped move work from wireframes into shipped UI</p></div>
             </div>
@@ -89,13 +89,13 @@ export default function CaseStudyMaverics() {
             <p>
               Identity orchestration products contain dense information, multi-step setup paths, and deeply contextual
               controls. Without deliberate design structure, these experiences can quickly become visually noisy and hard
-              to learn. A key challenge was finding ways to reduce cognitive load while still exposing the flexibility
+              to learn. A key challenge was making the product easier to understand without hiding the flexibility
               advanced users needed.
             </p>
 
             <div className="section-heading left top-gap">
               <p className="eyebrow">Approach</p>
-              <h2>From rough concepts to scalable product patterns</h2>
+              <h2>From rough concepts to patterns people could reuse</h2>
             </div>
             <div className="detail-grid">
               <article className="detail-card card">
@@ -104,7 +104,7 @@ export default function CaseStudyMaverics() {
               </article>
               <article className="detail-card card">
                 <h3>Interface consistency</h3>
-                <p>Reusable patterns across forms, panels, tables, navigation, and status-driven components helped create a more coherent product experience over time.</p>
+                <p>Reusable patterns across forms, panels, tables, navigation, and status-driven components helped make the product easier to extend over time.</p>
               </article>
               <article className="detail-card card">
                 <h3>Design to production</h3>
@@ -148,7 +148,7 @@ export default function CaseStudyMaverics() {
         <div className="container narrow-copy case-ending">
           <div className="section-heading left">
             <p className="eyebrow">Outcome</p>
-            <h2>A more mature and production-ready design language</h2>
+            <h2>A clearer foundation for the product</h2>
           </div>
           <p>
             This work helped establish a stronger visual and structural foundation for the product. Instead of isolated
@@ -156,8 +156,7 @@ export default function CaseStudyMaverics() {
             product quality, and supported enterprise customer expectations.
           </p>
           <p>
-            The result was a more coherent interface language, stronger internal consistency across product surfaces,
-            and a clearer foundation for future product growth.
+            The result was a more consistent interface and a clearer foundation for adding new product areas.
           </p>
           <p>
             It also reinforced an important principle in product design: good interface work is not only about aesthetics.

@@ -2,15 +2,14 @@ import { Link } from 'react-router-dom';
 
 export default function CaseStudyAiUi() {
   return (
-    <main>
+    <main id="main-content">
       <section className="hero case-hero">
         <div className="container case-hero-layout">
           <div className="hero-copy">
             <p className="eyebrow">Case Study</p>
-            <h1>Using AI Tools for Live User Interfaces</h1>
+            <h1>Designing interfaces with AI and code</h1>
             <p className="lede">
-              This experiment explored what happens when interface design moves directly into code using AI-assisted
-              workflows, real components, and live responsive behavior instead of static mockups alone.
+              This was an experiment in designing directly in code. I used AI tools to build a responsive interface, then reviewed the result myself and kept changing the parts that did not work.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="https://taikahn.github.io/ui-via-ai-react/" target="_blank" rel="noreferrer">View live project</a>
@@ -29,7 +28,7 @@ export default function CaseStudyAiUi() {
             <div className="metric card"><span className="metric-label">Workflow</span><strong>AI-assisted prototyping</strong></div>
             <div className="metric card"><span className="metric-label">Environment</span><strong>Cursor / VSCode</strong></div>
             <div className="metric card"><span className="metric-label">Build</span><strong>React / Vite</strong></div>
-            <div className="metric card"><span className="metric-label">Value</span><strong>Faster design-to-dev handoff</strong></div>
+            <div className="metric card"><span className="metric-label">Value</span><strong>Faster iteration</strong></div>
           </div>
         </div>
       </section>
@@ -48,40 +47,33 @@ export default function CaseStudyAiUi() {
           <div className="story-content">
             <div className="section-heading left">
               <p className="eyebrow">Overview</p>
-              <h2>Designing interfaces directly in the medium of the product</h2>
+              <h2>Designing in the medium of the product</h2>
             </div>
             <p>
-              Rather than relying only on static mockups or extensive Figma prototypes, this experiment used AI tools
-              inside a coding environment to quickly generate, refine, and test live interface ideas in React.
+              Rather than stopping at static mockups, I used AI tools inside a coding environment to build and revise interface ideas in React.
             </p>
             <p>
-              That made it easier to focus on the things that matter in actual use: mobile and desktop layouts,
-              breakpoints, grid behavior, hover states, menus, navigation systems, and interactions. Instead of
-              describing behavior abstractly, the interface could be experienced directly.
+              That made it easier to check the things that are easy to miss in a static frame: mobile layouts, breakpoints, menus, navigation, and the small interactions that make an interface feel finished.
             </p>
 
             <div className="editorial-block card">
               <p className="quote-mark">"</p>
               <p className="editorial-quote">
-                The most exciting part was not speed alone. It was the ability to think like a designer while shaping
-                something engineering could immediately inspect, understand, and extend.
+                The useful part was not speed by itself. It was being able to make a design decision, see it working, and give engineering something they could inspect and extend.
               </p>
             </div>
 
             <div className="section-heading left top-gap">
               <p className="eyebrow">Problem</p>
-              <h2>Static design artifacts can hide real interaction behavior</h2>
+              <h2>Static screens leave important questions unanswered</h2>
             </div>
             <p>
-              Traditional design workflows often require multiple translation steps between concept, prototype, handoff,
-              and implementation. Important qualities like responsiveness, interaction edge cases, and real navigation
-              behavior can remain partially unresolved until late in development. This experiment explored a more direct
-              path.
+              A screenshot cannot show how a layout behaves at another width, how a menu opens, or what happens when a user takes an unexpected path. Building the interface earlier made those questions visible sooner.
             </p>
 
             <div className="section-heading left top-gap">
-              <p className="eyebrow">Why it matters</p>
-              <h2>A faster and more transparent workflow</h2>
+              <p className="eyebrow">What changed</p>
+              <h2>Less guessing, earlier feedback</h2>
             </div>
             <div className="detail-grid">
               <article className="detail-card card">
@@ -93,14 +85,14 @@ export default function CaseStudyAiUi() {
                 <p>Designers can hand off something engineering can inspect, understand, and directly build from without translating every decision back out of screenshots.</p>
               </article>
               <article className="detail-card card">
-                <h3>New design leverage</h3>
-                <p>AI helps accelerate repetitive setup and variation exploration, leaving more time to focus on product judgment, interaction quality, and overall system coherence.</p>
+                <h3>More room to explore</h3>
+                <p>AI helped with repetitive setup and variations. The decisions about hierarchy, behavior, and quality were still mine.</p>
               </article>
             </div>
 
             <div className="section-heading left top-gap">
-              <p className="eyebrow">What this workflow unlocked</p>
-              <h2>Design advantages beyond mockups</h2>
+              <p className="eyebrow">What I learned</p>
+              <h2>Some design questions are easier to answer in code</h2>
             </div>
             <div className="check-grid">
               <div className="check-item card"><strong>Responsive validation</strong><p>Immediate testing of layout behavior across desktop and mobile contexts.</p></div>
@@ -118,19 +110,16 @@ export default function CaseStudyAiUi() {
         <div className="container narrow-copy case-ending">
           <div className="section-heading left">
             <p className="eyebrow">Outcome</p>
-            <h2>A meaningful shift in how designers can work</h2>
+            <h2>A more practical way to explore interface decisions</h2>
           </div>
           <p>
-            The biggest takeaway is not that code replaces design tools. It is that designers now have more viable ways
-            to explore, validate, and communicate interface decisions using the actual medium of the final product.
+            The point is not that code replaces design tools. It gives designers another place to think, test, and communicate decisions using the medium people will actually use.
           </p>
           <p>
-            The experiment showed how responsive validation, interaction realism, and implementation awareness can all
-            move earlier into the design process instead of waiting for handoff or development.
+            The experiment moved responsive behavior, interaction details, and implementation questions earlier in the process. It also made clear that generated code still needs a designer to review, edit, and sometimes throw away.
           </p>
           <p>
-            For designers willing to learn and experiment, AI-assisted coding workflows can create faster iteration,
-            better understanding of implementation realities, and a more direct collaboration path with engineering.
+            For designers willing to learn the basics of code, AI can make that exploration faster. It does not remove the need for taste, testing, or good judgment.
           </p>
         </div>
       </section>

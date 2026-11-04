@@ -74,7 +74,7 @@ export default function ContactForm() {
       <div className="contact-form" style={{ display: 'grid', gap: '0.75rem', alignContent: 'center' }}>
         <p className="eyebrow">Message sent</p>
         <p style={{ color: 'var(--text)', fontSize: '1.1rem' }}>
-          Thanks for reaching out — I'll get back to you soon.
+          Thanks for reaching out. I'll get back to you soon.
         </p>
         <button
           className="button button-secondary"
@@ -146,7 +146,7 @@ export default function ContactForm() {
         <button className="button button-primary" type="submit" disabled={status === 'sending'}>
           {status === 'sending' ? 'Sending…' : 'Send inquiry'}
         </button>
-        {status === 'error' && <p className="form-status" style={{ color: '#f87171' }}>Something went wrong. Please try again.</p>}
+        {status === 'error' && <p className="form-status" style={{ color: 'var(--status-error)' }}>Something went wrong. Please try again.</p>}
       </div>
     </form>
   );

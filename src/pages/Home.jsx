@@ -1,384 +1,80 @@
-import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
-import useLightbox from '../hooks/useLightbox';
-import useHeroTyping from '../hooks/useHeroTyping';
+import PearbarStudy from '../components/PearbarStudy';
 
-const HERO_TITLE = 'Design for complex software, systems, and modern web experiences.';
-
-// Gallery layout: 12-col grid. landscape=span 6 (16:10), portrait=span 4 (4:5),
-// square=span 4 (1:1). Order is arranged so each row packs cleanly:
-// 9 rows of 2 landscapes, 1 row of 3 portraits, 2 rows of 3 squares.
-const galleryImages = [
-  // Maverics product
-  { src: '/assets/maverics-agent-entry.jpg', alt: 'Maverics agentic entry flow', orientation: 'landscape' },
-  { src: '/assets/agentic-interface-dark-light.jpg', alt: 'Agentic interface dark and light mode', orientation: 'landscape' },
-  { src: '/assets/agent-fabric-dark.jpg', alt: 'Agent fabric dark mode', orientation: 'landscape' },
-  { src: '/assets/maverics-data-visualization.jpg', alt: 'Maverics data visualization', orientation: 'landscape' },
-  { src: '/assets/maverics-ai-webscreen.jpg', alt: 'Maverics AI web screen', orientation: 'landscape' },
-  { src: '/assets/maverics-cards-ui.jpg', alt: 'Maverics cards UI', orientation: 'landscape' },
-  { src: '/assets/agent-fabric-dark-full.jpg', alt: 'Agent fabric dark mode full', orientation: 'landscape' },
-  // Design systems
-  { src: '/assets/complex-color-systems.jpg', alt: 'Complex color systems', orientation: 'landscape' },
-  { src: '/assets/color-system-variables.jpg', alt: 'Variable color system dark and light', orientation: 'landscape' },
-  // UI elements
-  { src: '/assets/design-elements-items.jpg', alt: 'Design elements items', orientation: 'landscape' },
-  { src: '/assets/design-elements-nav-icons.jpg', alt: 'Design elements navigation icons', orientation: 'landscape' },
-  { src: '/assets/design-elements-icons.jpg', alt: 'Design elements icons', orientation: 'landscape' },
-  { src: '/assets/design-elements-search-card.jpg', alt: 'Design elements search card', orientation: 'landscape' },
-  { src: '/assets/monogram-badges.jpg', alt: 'Monogram badges', orientation: 'landscape' },
-  { src: '/assets/modals-dialogs.jpg', alt: 'Modals and dialogs', orientation: 'landscape' },
-  { src: '/assets/search-range-filter.jpg', alt: 'Search range filter', orientation: 'landscape' },
-  // Websites
-  { src: '/assets/total-energy-group.jpg', alt: 'Total Energy Group website', orientation: 'landscape' },
-  { src: '/assets/signet-capital-advisors.jpg', alt: 'Signet Capital Advisors website', orientation: 'landscape' },
-  // Portrait row
-  { src: '/assets/knife-edge-software.jpg', alt: 'Knife Edge Software flight simulator website', orientation: 'portrait' },
-  { src: '/assets/design-exploration-one.png', alt: 'Design exploration one', orientation: 'portrait' },
-  { src: '/assets/design-exploration-two.png', alt: 'Design exploration two', orientation: 'portrait' },
-  // Artwork (square)
-  { src: '/assets/artwork-one.jpg', alt: 'Artwork sample one', orientation: 'square' },
-  { src: '/assets/artwork-two.jpg', alt: 'Artwork sample two', orientation: 'square' },
-  { src: '/assets/artwork-three.jpg', alt: 'Artwork sample three', orientation: 'square' },
-  // Photography (true landscape, but cropped square in the grid; full image in lightbox)
-  { src: '/assets/unsplash-photography-views.jpg', alt: 'Unsplash photography views', orientation: 'square' },
-  { src: '/assets/landscape-photography.jpg', alt: 'Landscape photography', orientation: 'square' },
-  { src: '/assets/colorado-snow-guitar.jpg', alt: 'Colorado snow guitar photography', orientation: 'square' },
+const visualWork = [
+  { src: 'artwork-one.jpg', title: 'Graphic explorations', note: 'Color, form, and composition' },
+  { src: 'landscape-photography.jpg', title: 'Outside the screen', note: 'Landscape photography' },
+  { src: 'colorado-snow-guitar.jpg', title: 'A different kind of practice', note: 'Music and photography' },
 ];
 
 export default function Home() {
-  const { openAt, lightboxElement } = useLightbox({ images: galleryImages });
-  const { titleRef, baseRef, overlayRef } = useHeroTyping(HERO_TITLE);
-
   return (
     <>
-      <main id="top">
-        {/* Hero */}
-        <section className="hero premium-hero">
-          <div className="container hero-grid premium-hero-grid">
-            <div className="hero-copy">
-              <p className="eyebrow">Visual Design Portfolio 2026</p>
-              <h1 className="hero-title" ref={titleRef}>
-                <span className="hero-title-base" ref={baseRef}>{HERO_TITLE}</span>
-                <span className="hero-title-overlay" ref={overlayRef} aria-hidden="true"></span>
-              </h1>
-              <p className="lede">
-                I help turn complicated products into clearer, more usable experiences through interface design,
-                systems thinking, responsive execution, and close alignment with how things actually get built, with
-                agent-driven design as an additional tool when it fits.
-              </p>
-              <div className="hero-actions">
-                <a className="button button-primary" href="#case-studies">View case studies</a>
-                <a className="button button-secondary" href="#about">About me</a>
-              </div>
-              <div className="hero-proof">
-                <span>Product Design</span>
-                <span>Software Design</span>
-                <span>Front-End</span>
-                <span>Responsive Web</span>
-              </div>
-            </div>
-            <div className="hero-visual-stack">
-              <div className="hero-visual card spotlight hero-main-visual">
-                <img src="/assets/agentic-interface-dark-light.jpg" alt="Agentic interface designs in dark and light mode" />
-              </div>
-              <div className="hero-side-stat card">
-                <span className="metric-label">Focus</span>
-                <strong>UX/UI, design systems, product thinking, responsive interfaces</strong>
-              </div>
+      <main id="main-content" className="portfolio-home">
+        <section className="intro-section page-width" aria-labelledby="intro-title">
+          <div className="intro-kicker"><span className="index-label">Designing and building software</span><span className="edition-label">Selected work / 2026</span></div>
+          <h1 id="intro-title">I design digital products.<br /><em>And help build them.</em></h1>
+          <div className="intro-bottom">
+            <p className="intro-role">Tai Kahn<br /><span>Product and interface<br />designer</span></p>
+            <div className="intro-statement">
+              <p>I design product interfaces and work across code, testing, and release, with AI tools in the mix.</p>
+              <a className="editorial-link" href="#work">Explore the work <span aria-hidden="true">↓</span></a>
             </div>
           </div>
         </section>
 
-        {/* Case Studies */}
-        <section id="case-studies" className="section">
-          <div className="container">
-            <div className="section-heading section-heading-split">
-              <div>
-                <p className="eyebrow">Featured work</p>
-                <h2>Selected case studies</h2>
-              </div>
-              <p className="section-intro">
-                A selection of product, systems, and AI workflow work focused on complex software, implementation-aware design,
-                and clearer user experience at scale.
-              </p>
-            </div>
-            <div className="case-study-grid">
-              <article className="case-card card premium-case-card">
-                <div className="case-image">
-                  <img src="/assets/agentic-interface-dark-light.jpg" alt="Maverics product design case study preview" />
-                </div>
-                <div className="case-body">
-                  <div className="case-meta-row"><span>Figma</span><span>Enterprise SaaS</span><span>5 years</span></div>
-                  <img className="mini-logo" src="/assets/maverics-logo.svg" alt="Maverics logo" />
-                  <h3>Case Study: Maverics Product Design</h3>
-                  <p>
-                    Led interface evolution for a next-generation identity orchestration platform, helping move the product
-                    from exploratory wireframes into a more mature, production-ready enterprise experience.
-                  </p>
-                  <ul className="case-highlights">
-                    <li>Navigation and workflow clarity</li>
-                    <li>Reusable product patterns</li>
-                    <li>Design decisions aligned with implementation</li>
-                  </ul>
-                  <Link className="button button-primary" to="/case-study-maverics">Read case study →</Link>
-                </div>
-              </article>
+        <section id="work" className="work-section page-width" aria-labelledby="work-title">
+          <span id="case-studies" className="anchor-alias" aria-hidden="true" />
+          <div className="section-rule"><h2 id="work-title">Selected work</h2><span>Product work and side projects</span></div>
 
-              <article className="case-card card premium-case-card">
-                <div className="case-image">
-                  <img src="/assets/color-system-dark-light.jpg" alt="Complex design systems preview" />
-                </div>
-                <div className="case-body">
-                  <div className="case-meta-row"><span>Design Systems</span><span>Figma</span><span>React</span></div>
-                  <img className="mini-logo" src="/assets/strata-logo.svg" alt="Strata logo" />
-                  <h3>Case Study: Complex Design Systems</h3>
-                  <p>
-                    Built scalable design systems with variables, theme logic, component state coverage, and a more useful
-                    developer-facing reference tied closely to shipped product reality.
-                  </p>
-                  <ul className="case-highlights">
-                    <li>Dark / light mode variables</li>
-                    <li>Component state coverage</li>
-                    <li>Shared language for design and engineering</li>
-                  </ul>
-                  <Link className="button button-primary" to="/case-study-design-systems">Read case study →</Link>
-                </div>
-              </article>
+          <article className="featured-project">
+            <div className="project-heading"><div><p className="index-label">Collaborative product work</p><h3><Link to="/work/zide">Zide <span aria-hidden="true">↗</span></Link></h3></div><p>A development workspace.<br />Designed down to the details.</p></div>
+            <Link className="zide-stage project-image-link" to="/work/zide" aria-label="Explore my work on Zide">
+              <div className="stage-label"><span>Zide / Native desktop software</span><span>Interface · Interaction · Implementation</span></div>
+              <img src="/assets/zide-workspace.webp" width="1440" height="901" alt="Zide’s published workspace overview, with Git staging and an Assist conversation side by side" fetchPriority="high" />
+            </Link>
+            <div className="project-summary"><p>Shaping how a complex workspace feels and behaves: staging interactions, theme hierarchy, everyday navigation, and the website that introduces the product.</p><Link className="editorial-link" to="/work/zide">Inside the work <span aria-hidden="true">↗</span></Link></div>
+          </article>
 
-              <article className="case-card card premium-case-card">
-                <div className="case-image">
-                  <img src="/assets/ai-assisted-react-workflow.jpg" alt="AI tools for live user interfaces preview" />
-                </div>
-                <div className="case-body">
-                  <div className="case-meta-row"><span>AI Workflow</span><span>React</span><span>NPM + Node</span></div>
-                  <img className="mini-logo" src="/assets/strata-logo.svg" alt="Strata logo" />
-                  <h3>Case Study: Using AI Tools for Live User Interfaces</h3>
-                  <p>
-                    Explored an AI-assisted workflow for designing directly in code, making responsive behavior,
-                    interactions, and implementation intent far more visible during the design process.
-                  </p>
-                  <ul className="case-highlights">
-                    <li>Live responsive prototyping</li>
-                    <li>Stronger design-to-dev handoff</li>
-                    <li>Implementation-aware exploration and freedom</li>
-                  </ul>
-                  <Link className="button button-primary" to="/case-study-ai-ui">Read case study →</Link>
-                </div>
-              </article>
-            </div>
+          <article className="pearbar-project">
+            <div className="pearbar-copy"><p className="index-label">Independent product</p><h3>Pearbar<span className="project-dot">.</span></h3><p className="project-deck">A shorter trip<br />to the menu.</p><p>A Mac utility built around a small, persistent friction: the distance between the window you’re working in and its menus. Product idea, native behavior, visual identity, and a website that lets you try the idea.</p><Link className="editorial-link" to="/work/pearbar">From idea to application <span aria-hidden="true">↗</span></Link></div>
+            <PearbarStudy />
+          </article>
+
+          <div className="supporting-projects">
+            <article className="supporting-project">
+              <figure>
+                <Link className="audioglass-stage project-image-link" to="/work/audioglass" aria-label="Explore AudioGlass"><img src="/assets/audioglass-workspace.webp" width="1446" height="1206" loading="lazy" alt="AudioGlass comparing cyan and amber audio waveforms, with timestamped example mix notes" /></Link>
+                <figcaption className="screenshot-caption">Actual interface · note text edited for illustration.</figcaption>
+              </figure>
+              <p className="index-label">Independent studio tool</p><h3>AudioGlass</h3><p>Compare takes, listen in sync, and leave notes at exact moments. A software project rooted in my own music practice.</p><Link className="editorial-link" to="/work/audioglass">The idea behind the tool <span aria-hidden="true">↗</span></Link>
+            </article>
+            <article className="supporting-project">
+              <Link className="maverics-stage project-image-link" to="/case-study-maverics" aria-label="Read the Maverics product design case study"><img src="/assets/agentic-interface-dark-light.jpg" width="1600" height="1000" loading="lazy" alt="Maverics interface designs in dark and light mode" /></Link>
+              <p className="index-label">Enterprise product design</p><h3>Maverics</h3><p>Five years designing interfaces and systems for Strata Identity, from early flows and wireframes to the product customers used.</p><Link className="editorial-link" to="/case-study-maverics">Explore the case study <span aria-hidden="true">↗</span></Link>
+            </article>
           </div>
+          <div className="archive-links"><span className="index-label">Further reading</span><Link to="/case-study-design-systems">Design systems <span aria-hidden="true">↗</span></Link><Link to="/case-study-ai-ui">An early experiment in live UI <span aria-hidden="true">↗</span></Link></div>
         </section>
 
-        {/* About */}
-        <section id="about" className="section section-muted">
-          <div className="container about-grid">
-            <div className="about-copy">
-              <div className="section-heading left">
-                <p className="eyebrow">About</p>
-                <h2>Adaptive, experienced, and deeply comfortable with complex products</h2>
-              </div>
-              <p>
-                I am a highly adaptive and experienced creative whose career began at Apple, where I helped implement
-                designs using code into products like iTunes and Mac OS X. At Ping Identity, I designed the interface for
-                and provided front-end code for an industry-first GUI of PingFederate, their flagship identity product.
-              </p>
-              <p>
-                Over the last five years at Strata Identity, I designed the interface for their cloud-based Maverics
-                Identity Orchestration Platform in Figma, helping progress the product from wireframes through hi-fi pages
-                and ultimately into a live customer-facing platform.
-              </p>
-              <p>
-                Across that work I designed each stage of the interface, organized complex pathways, built prototypes,
-                created multiple design systems, maintained variable color systems for dark and light modes, and helped the
-                team continually improve user experience through iteration, research, feedback, and testing.
-              </p>
-              <p>
-                Outside of work I enjoy the mountains, riding bicycles, skateboarding, making music, and flying FPV
-                drones.
-              </p>
-            </div>
-            <aside className="about-panel card">
-              <div className="about-panel-inner">
-                <div>
-                  <p className="summary-label">Background</p>
-                  <p>Apple, Ping Identity, Strata Identity, startups, product interfaces, web, and visual design.</p>
-                </div>
-                <div>
-                  <p className="summary-label">Strengths</p>
-                  <p>Complex software, design systems, implementation awareness, visual quality, and cross-functional collaboration.</p>
-                </div>
-                <div>
-                  <p className="summary-label">Availability</p>
-                  <p>Currently available for product design, UX/UI, systems, and modern web interface work.</p>
-                </div>
-              </div>
-            </aside>
-          </div>
+        <section id="practice" className="practice-section" aria-labelledby="practice-title">
+          <div className="page-width practice-layout"><div><p className="index-label">The practice</p><h2 id="practice-title">The judgment stays.<br /><em>The reach changes.</em></h2></div><div className="practice-copy"><p className="large-copy">I like seeing the design become real.</p><p>AI tools let me move from an idea to a working interaction quickly. I can try it in the browser, inspect the result, check the awkward cases, and change it where it matters.</p><p>That still requires judgment. I decide what belongs in the product, what can be simpler, and when the work is ready to ship.</p></div></div>
         </section>
 
-        {/* Testimonials */}
-        <section id="recommendations" className="section">
-          <div className="container">
-            <div className="section-heading">
-              <p className="eyebrow">Recommendations</p>
-              <h2>What collaborators have said</h2>
-            </div>
-            <div className="testimonial-grid">
-              <article className="testimonial card">
-                <p className="testimonial-quote">
-                  Over the past four+ years, Tai has been one of the most impactful and reliable Senior UX/UI Designers I've
-                  had the privilege of working with. He quickly became indispensable—designing clean, scalable, and
-                  thoughtful user experiences for an exceptionally complex product.
-                </p>
-                <p className="testimonial-credit">Jason Bowers — Lead Experience &amp; Creative Designer at Strata Identity</p>
-              </article>
-              <article className="testimonial card">
-                <p className="testimonial-quote">
-                  What sets Tai apart is that he thinks like both a designer and a builder. He cares deeply about how
-                  something looks and feels, but he's equally focused on whether it works, scales, and delivers value.
-                </p>
-                <p className="testimonial-credit">Michel Khalil — Principal, Creative Director at theDESIGNsnobs</p>
-              </article>
-              <article className="testimonial card">
-                <p className="testimonial-quote">
-                  Tai has an expert level understanding of the Identity domain and excellent design skills, always
-                  delivering with high-quality aesthetics while adapting to products that evolve rapidly.
-                </p>
-                <p className="testimonial-credit">Darren Platt — VP of Engineering at Strata Identity</p>
-              </article>
-            </div>
-          </div>
+        <section id="about" className="about-editorial page-width" aria-labelledby="about-title">
+          <div className="section-rule"><h2 id="about-title">A little background</h2><span>Design has always been the through line.</span></div>
+          <div className="background-grid"><div><p className="background-heading">From pixels<br />to products.<br /><em>Still curious.</em></p><p className="background-personal">Away from the screen: mountains, bicycles, skateboards, music, and FPV drones.</p></div><div className="background-copy"><p>My career began at Apple, helping implement designs in products including iTunes and Mac OS X. At Ping Identity, I designed interfaces and contributed front-end code for PingFederate.</p><p>At Strata Identity, I spent five years shaping Maverics: product flows, interface patterns, prototypes, and the design systems underneath them.</p><p>Today, that experience informs my work on Zide and my own software projects. I’m interested in the whole path from noticing a problem to putting something useful in someone’s hands.</p><div className="career-line"><span>Apple</span><span>Ping Identity</span><span>Strata Identity</span><span>Zide</span></div></div></div>
+          <blockquote className="collaborator-quote"><p>“He thinks like both a designer and a builder.”</p><cite>Michel Khalil, Principal and Creative Director at theDESIGNsnobs</cite></blockquote>
         </section>
 
-        {/* Expertise */}
-        <section id="services" className="section section-muted">
-          <div className="container">
-            <div className="section-heading">
-              <p className="eyebrow">What I do</p>
-              <h2>Core areas of expertise</h2>
-            </div>
-            <div className="three-up">
-              <article className="info-card card">
-                <h3>Agentic Software Design</h3>
-                <p>
-                  I design and prototype AI-driven products and agent workflows, shaping how people interact with LLMs,
-                  tools, and automated systems through thoughtful UI, prompts, and orchestration.
-                </p>
-              </article>
-              <article className="info-card card">
-                <h3>Product Design</h3>
-                <p>
-                  I design interfaces, product flows, and software experiences with a focus on clarity, usability,
-                  hierarchy, navigation, and systems that scale as products grow more complex.
-                </p>
-              </article>
-              <article className="info-card card">
-                <h3>Web Design</h3>
-                <p>
-                  I build and design websites across platforms like WordPress, Shopify, Framer, and Figma Make, as
-                  well as fully coded pages using HTML, CSS, JS, and modern front-end workflows.
-                </p>
-              </article>
-            </div>
-          </div>
+        <section id="gallery" className="visual-section page-width" aria-labelledby="visual-title">
+          <div className="section-rule"><h2 id="visual-title">Another side of the work</h2><span>Image, sound, and the world outside.</span></div>
+          <div className="visual-grid">{visualWork.map((item) => <figure key={item.src}><a href={`/assets/${item.src}`} target="_blank" rel="noreferrer" aria-label={`View ${item.title.toLowerCase()} full size in a new tab`}><img src={`/assets/${item.src}`} alt={item.title} loading="lazy" /></a><figcaption><strong>{item.title}</strong><span>{item.note}</span></figcaption></figure>)}</div>
+          <div className="music-links"><p>Music has a place on the web, too.</p><a className="editorial-link" href="https://fistmeetsglass.com" target="_blank" rel="noreferrer">FistMeetsGlass <span aria-hidden="true">↗</span></a><a className="editorial-link" href="https://github.com/taikahn/tairom-website" target="_blank" rel="noreferrer">TAIROM website / source <span aria-hidden="true">↗</span></a></div>
         </section>
-
-        {/* Gallery */}
-        <section id="gallery" className="section">
-          <div className="container">
-            <div className="section-heading section-heading-split">
-              <div>
-                <p className="eyebrow">Visual examples</p>
-                <h2>Portfolio gallery</h2>
-              </div>
-              <p className="section-intro">
-                A broader mix of interface explorations, web work, systems thinking, and visual experiments across product,
-                photography, and digital design.
-              </p>
-            </div>
-            <div className="gallery-grid lightbox-gallery">
-              {galleryImages.map((img, i) => (
-                <figure key={i} className={`gallery-item card${img.orientation && img.orientation !== 'landscape' ? ` ${img.orientation}` : ''}`}>
-                  <button className="gallery-button" type="button" onClick={() => openAt(i)}>
-                    <img src={img.src} alt={img.alt} />
-                  </button>
-                </figure>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Skills */}
-        <section id="skills" className="section section-muted">
-          <div className="container skills-layout">
-            <div>
-              <div className="section-heading left">
-                <p className="eyebrow">Toolkit</p>
-                <h2>Software experience</h2>
-              </div>
-              <div className="pill-group">
-                {[
-                  'MacOS',
-                  'Windows',
-                  'Linux',
-                  'Claude',
-                  'Ollama',
-                  'Local LLMs',
-                  'Figma',
-                  'Adobe Creative Cloud',
-                  'Affinity',
-                  'Cursor',
-                  'VSCode',
-                  'WordPress',
-                  'HTML',
-                  'CSS',
-                  'JS',
-                  'GitHub',
-                  'Git',
-                  'NPM',
-                  'Node',
-                  'Vite',
-                  'React',
-                  'Terminal',
-                  'CLI',
-                  'Rust',
-                  'Tauri',
-                  'Glint',
-                  'Virtual Machines',
-                  'Docker',
-                  'Miro',
-                  'Canva',
-                  'Adobe Photoshop',
-                  'Adobe Illustrator',
-                  'Adobe XD',
-                  'Adobe Premiere',
-                  'Final Cut',
-                  'Logic Pro'
-                ].map((s) => (
-                  <span key={s}>{s}</span>
-                ))}
-              </div>
-            </div>
-            <div>
-              <div className="section-heading left">
-                <p className="eyebrow">Capabilities</p>
-                <h2>Skills and experience</h2>
-              </div>
-              <div className="pill-group">
-                {['Product Design','Design Systems','User Experience','User Interfaces','Agentic Software Design','AI Agents','UI Prototyping','Systems and Stacks','Graphic Design','Visual Communication','Color Theory','Design Systems','Design Principles','Communication','Collaboration','Accessibility','Best Practices','Web Design & Development','Responsive Design','Mobile Web','Typography','Photography','Videography','Video Editing','3D Printing'].map((s) => (
-                  <span key={s}>{s}</span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-
       </main>
-
       <Footer />
-      {lightboxElement}
     </>
   );
 }

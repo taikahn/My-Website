@@ -1670,7 +1670,7 @@ h3 {
 }
 
 /* ---------------------------------------------------------------
-   "What I do" / #services — scoped sage accent.
+   "What I do" / #services, scoped sage accent.
    Additive only. Reuses existing tokens as fallbacks so nothing
    else on the page is affected.
    --------------------------------------------------------------- */
@@ -1763,7 +1763,7 @@ h3 {
 }
 
 /* ---------------------------------------------------------------
-   "Recommendations" / #recommendations — scoped silver/graphite accent.
+   "Recommendations" / #recommendations, scoped silver/graphite accent.
    Section is not .section-muted on the page, so the wash is added
    here from scratch, calibrated lighter than #services so it doesn't
    over-punch against the bare page background.
@@ -1856,11 +1856,11 @@ h3 {
 }
 
 /* ---------------------------------------------------------------
-   "Featured work" / #case-studies — scoped silver/graphite treatment
+   "Featured work" / #case-studies, scoped silver/graphite treatment
    on the case-study cards ONLY. Section background, eyebrow, heading,
    and intro copy are intentionally untouched.
    Reuses the same silver palette family as #recommendations but with
-   slightly stronger card surfaces — these are the largest, most
+   slightly stronger card surfaces, these are the largest, most
    important cards on the page and they need to hold their own.
    --------------------------------------------------------------- */
 :root {
@@ -1926,11 +1926,11 @@ h3 {
 }
 
 /* ---------------------------------------------------------------
-   Metric cards — unified glassy treatment, hue-neutral.
+   Metric cards, unified glassy treatment, hue-neutral.
    Targets:
      .hero-side-stat.card  (Home hero, "Focus")
      .metric.card          (all 3 case studies, metrics-strip)
-   No color shift — reuses existing neutral tokens. Adds the
+   No color shift, reuses existing neutral tokens. Adds the
    top hairline + hover lift pattern established elsewhere.
    --------------------------------------------------------------- */
 :root {
@@ -1945,7 +1945,7 @@ h3 {
   --metric-hover-shadow: 0 14px 32px rgba(37, 35, 35, 0.1);
 }
 
-/* Hero side stat — already has full card chrome, just add the
+/* Hero side stat, already has full card chrome, just add the
    hairline + hover motion. Leave background/border/shadow alone. */
 .hero-side-stat.card {
   position: relative;
@@ -1988,7 +1988,7 @@ h3 {
   );
 }
 
-/* Metric strip cards — promote from flat pill to soft glass while
+/* Metric strip cards, promote from flat pill to soft glass while
    preserving the compact 12px radius and existing pill-gradient. */
 .metric.card {
   position: relative;
@@ -2040,7 +2040,7 @@ h3 {
   );
 }
 
-/* Case study footer cards — Previous/Next nav cards and the
+/* Case study footer cards, Previous/Next nav cards and the
    contact CTA panel. Same hue-neutral glass treatment as metric
    cards. Both already use full .card chrome, so we only add the
    top hairline + hover motion. */
@@ -2092,7 +2092,7 @@ h3 {
 
 /* CTA panel is not itself interactive (its buttons are), so the
    hairline brightens on focus-within when a button inside is
-   focused, but no transform — the buttons own the motion. */
+   focused, but no transform, the buttons own the motion. */
 .case-footer-cta.card:focus-within::before {
   opacity: 1;
   background: linear-gradient(
