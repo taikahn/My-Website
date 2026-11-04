@@ -2,18 +2,18 @@ import { Link } from 'react-router-dom';
 
 export default function CaseStudyAiUi() {
   return (
-    <main id="main-content">
+    <main id="main-content" className="case-study-page">
       <section className="hero case-hero">
         <div className="container case-hero-layout">
           <div className="hero-copy">
             <p className="eyebrow">Case Study</p>
-            <h1>Designing interfaces with AI and code</h1>
+            <h1>Designing in the browser with AI</h1>
             <p className="lede">
-              This was an experiment in designing directly in code. I used AI tools to build a responsive interface, then reviewed the result myself and kept changing the parts that did not work.
+              I wanted to get closer to the thing I was designing. Using AI tools inside a React project, I built and revised an interface in code, then tested the responsive behavior and interaction details instead of leaving those questions for later.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="https://taikahn.github.io/ui-via-ai-react/" target="_blank" rel="noreferrer">View live project</a>
-              <Link className="button button-secondary" to="/#case-studies">Back to portfolio</Link>
+              <Link className="button button-secondary" to="/#work">Back to selected work</Link>
             </div>
           </div>
           <div className="hero-visual card spotlight">
@@ -47,7 +47,7 @@ export default function CaseStudyAiUi() {
           <div className="story-content">
             <div className="section-heading left">
               <p className="eyebrow">Overview</p>
-              <h2>Designing in the medium of the product</h2>
+              <h2>Getting closer to the thing being designed</h2>
             </div>
             <p>
               Rather than stopping at static mockups, I used AI tools inside a coding environment to build and revise interface ideas in React.

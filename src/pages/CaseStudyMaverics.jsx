@@ -15,18 +15,18 @@ export default function CaseStudyMaverics() {
 
   return (
     <>
-    <main id="main-content">
+    <main id="main-content" className="case-study-page">
       <section className="hero case-hero">
         <div className="container case-hero-layout">
           <div className="hero-copy">
             <p className="eyebrow">Case Study</p>
-            <h1>Maverics Product Design</h1>
+            <h1>Designing Maverics for enterprise identity</h1>
             <p className="lede">
               Over five years at Strata Identity, I helped shape the interface direction for Maverics Identity,
               a cloud-based security and identity orchestration platform used by enterprise customers.
             </p>
             <div className="hero-actions">
-              <Link className="button button-primary" to="/#case-studies">Back to portfolio</Link>
+              <Link className="button button-primary" to="/#work">Back to selected work</Link>
             </div>
           </div>
           <div className="hero-visual card spotlight">
@@ -176,7 +176,7 @@ export default function CaseStudyMaverics() {
             <h3>Let's talk about product design, systems, and interface strategy.</h3>
             <div className="hero-actions compact-actions">
               <Link className="button button-primary" to="/#contact">Contact me</Link>
-              <Link className="button button-secondary" to="/#case-studies">Back to portfolio</Link>
+              <Link className="button button-secondary" to="/#work">Back to selected work</Link>
             </div>
           </div>
         </div>

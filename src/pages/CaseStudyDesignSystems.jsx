@@ -18,18 +18,17 @@ export default function CaseStudyDesignSystems() {
 
   return (
     <>
-    <main id="main-content">
+    <main id="main-content" className="case-study-page">
       <section className="hero case-hero">
         <div className="container case-hero-layout">
           <div className="hero-copy">
             <p className="eyebrow">Case Study</p>
-            <h1>Complex Design Systems</h1>
+            <h1>Design systems for real product work</h1>
             <p className="lede">
-              Building a useful design system takes more than a component library. It needs clear names, real states, theme rules, and documentation people can use.
-              It requires structure, naming discipline, states, theming logic, and practical documentation.
+              At Strata Identity, I built systems that helped designers and engineers make better product decisions together. The work covered variables, themes, states, and the documentation around them, but the real measure was whether the system stayed useful in daily work.
             </p>
             <div className="hero-actions">
-              <Link className="button button-primary" to="/#case-studies">Back to portfolio</Link>
+              <Link className="button button-primary" to="/#work">Back to selected work</Link>
             </div>
           </div>
           <div className="hero-visual card spotlight">
@@ -64,7 +63,7 @@ export default function CaseStudyDesignSystems() {
           <div className="story-content">
             <div className="section-heading left">
               <p className="eyebrow">Overview</p>
-              <h2>Making a system people could use</h2>
+              <h2>Making a system people could use every day</h2>
             </div>
             <p>
               At Strata Identity I created multiple Figma-based design systems that helped organize the product UI into
