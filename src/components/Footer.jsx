@@ -1,8 +1,15 @@
+import { useRef } from 'react';
 import ContactForm from './ContactForm';
+import useHatchClear from './useHatchClear';
 
 export default function Footer() {
+  const footerRef = useRef(null);
+  const clearRef = useRef(null);
+  useHatchClear(footerRef, clearRef);
+
   return (
-    <footer id="contact" className="portfolio-footer">
+    <footer id="contact" className="portfolio-footer" ref={footerRef}>
+      <span className="hatch-texture" aria-hidden="true"><span className="hatch-clear" ref={clearRef}><span className="hatch-blob" /></span></span>
       <div className="page-width">
         <div className="contact-editorial">
           <div className="contact-copy">
