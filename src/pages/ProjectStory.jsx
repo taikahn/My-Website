@@ -31,7 +31,7 @@ export default function ProjectStory() {
           <dl className="story-facts">
             <div><dt>My focus</dt><dd>{project.scope}</dd></div>
             <div><dt>Context</dt><dd>{project.context}</dd></div>
-            {project.systemLabel && <div><dt>System</dt><dd><Link className="editorial-link" to="#system">{project.systemLabel} <span aria-hidden="true">↓</span></Link></dd></div>}
+            {project.systemLabel && <div><dt>System</dt><dd><Link className="editorial-link" to={`#${project.systemId || 'system'}`}>{project.systemLabel} <span aria-hidden="true">↓</span></Link></dd></div>}
             {project.link && <div><dt>On the web</dt><dd><a className="editorial-link" href={project.link} target="_blank" rel="noreferrer">{project.linkLabel} <span aria-hidden="true">↗</span></a></dd></div>}
           </dl>
         </header>

@@ -68,6 +68,8 @@ export const projects = {
     introduction: 'Maverics is an identity orchestration platform used by enterprise customers including Kroger, Motorola, Nokia, and 3M. Over five years at Strata Identity, I helped take it from exploratory wireframes to the live product, along with the design systems underneath it.',
     scope: 'Product flows, navigation, interface patterns, prototypes, and design systems',
     context: 'Strata Identity · enterprise identity SaaS · five years',
+    systemLabel: 'Design systems',
+    systemId: 'design-systems',
     hero: { src: '/assets/agentic-interface-dark-light.jpg', width: 1600, height: 1000, alt: 'Maverics agent fabric overview, split between dark and light themes, with agent platforms, a hexagon map of agents by risk, and a table of fabrics', caption: 'Agent fabric overview in dark and light themes.' },
     chapters: [
       {
@@ -89,6 +91,15 @@ export const projects = {
         ],
       },
       {
+        title: 'Design for what ships next.',
+        text: 'The work moved from exploratory wireframes through high-fidelity design into a live, customer-facing product. Reusable patterns across forms, panels, tables, and navigation made each new area easier to design and to build.',
+        detail: 'The result was a more consistent interface and a clearer foundation for new product areas, including the platform’s more recent AI-agent features shown here.',
+        figures: [
+          { src: '/assets/maverics-agent-entry.jpg', width: 1600, height: 1000, alt: 'Maverics sandbox sign-up screen with terms acceptance, introducing identity orchestration for AI agents', caption: 'Sandbox sign-up for the AI-agent features.' },
+          { src: '/assets/maverics-ai-webscreen.jpg', width: 1600, height: 1000, alt: 'Maverics product page introducing the runtime identity control plane for AI agents, above a dark product screenshot', caption: 'Product page for the runtime identity control plane.' },
+        ],
+      },
+      {
         id: 'design-systems',
         title: 'Keep the system close to the product.',
         text: 'I built several Figma design systems for Maverics. Variables and token-like structures made dark and light modes far easier to manage, and components covered the states real products need: hover, selected, disabled, empty, and error.',
@@ -97,15 +108,6 @@ export const projects = {
           { src: '/assets/color-system-variables.jpg', width: 1600, height: 1000, alt: 'Figma variables panel mapping text color tokens to light and dark values, in front of full color ramps', caption: 'Color variables mapped to light and dark modes.' },
           { src: '/assets/design-elements-items.jpg', width: 1600, height: 1100, alt: 'Toggles, checkboxes, and radio buttons in every state, beside status badges for success, denied, failed, and deployment stages', caption: 'Component states for toggles, checkboxes, radios, and status badges.' },
           { src: '/assets/search-range-filter.jpg', width: 1600, height: 1000, alt: 'Date range search with a filter menu, shown closed and open in light and dark themes', caption: 'Date range and filter component, light and dark.' },
-        ],
-      },
-      {
-        title: 'Design for what ships next.',
-        text: 'The work moved from exploratory wireframes through high-fidelity design into a live, customer-facing product. Reusable patterns across forms, panels, tables, and navigation made each new area easier to design and to build.',
-        detail: 'The result was a more consistent interface and a clearer foundation for new product areas, including the platform’s more recent AI-agent features shown here.',
-        figures: [
-          { src: '/assets/maverics-agent-entry.jpg', width: 1600, height: 1000, alt: 'Maverics sandbox sign-up screen with terms acceptance, introducing identity orchestration for AI agents', caption: 'Sandbox sign-up for the AI-agent features.' },
-          { src: '/assets/maverics-ai-webscreen.jpg', width: 1600, height: 1000, alt: 'Maverics product page introducing the runtime identity control plane for AI agents, above a dark product screenshot', caption: 'Product page for the runtime identity control plane.' },
         ],
       },
     ],
